@@ -14,7 +14,7 @@
         /></art-work-header>
       </b-row>
       <b-row id="art-work-body" v-if="mode">
-        <b-col v-for="data in images" :key="data.key">
+        <b-col v-for="data in imagesShuffled" :key="data.key">
           <base-art-work-image :image="data"></base-art-work-image>
         </b-col>
       </b-row>
@@ -31,13 +31,13 @@
           class="centrify"
         >
           <b-carousel-slide
-            v-for="data in images"
+            v-for="data in imagesShuffled"
             :key="data.key"
             id="carousel-slide"
             ><template #img>
               <img
                 :src="getImage(data.image)"
-                alt="loading..."
+                :alt="loadingGIF"
                 class="base-image"
                 loading="lazy"
               />
@@ -61,11 +61,11 @@ export default {
   },
   data() {
     return {
-      imagesList: ArtList,
+      images: ArtList,
+      imagesShuffled: null,
       mode: true,
       slide: 0,
       sliding: null,
-      images: null,
     };
   },
   methods: {
@@ -76,7 +76,7 @@ export default {
       this.sliding = false;
     },
     getImage(path) {
-      return this.$store.state.artworksLink + path;
+      return require("@/assets/artworks/" + path);
     },
     toggleMode() {
       this.mode = !this.mode;
@@ -86,15 +86,19 @@ export default {
     this.$store.commit("changeHeaderColor", "#b3b3b3");
     this.$store.commit("changeHeaderBase", "#3d3d3d");
 
-    for (let i = this.imagesList.length - 1; i > 0; i--) {
+    for (let i = this.images.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * i);
-      const temp = this.imagesList[i];
-      this.imagesList[i] = this.imagesList[j];
-      this.imagesList[j] = temp;
+      const temp = this.images[i];
+      this.images[i] = this.images[j];
+      this.images[j] = temp;
     }
-    this.images = this.imagesList;
+    this.imagesShuffled = this.images;
   },
-  computed: {},
+  computed: {
+    loadingGIF() {
+      return require("@/assets/resources/loading-buffering.gif");
+    },
+  },
 };
 </script>
 

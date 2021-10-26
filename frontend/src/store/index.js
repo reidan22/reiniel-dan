@@ -9,7 +9,7 @@ export default new Vuex.Store({
     headerBase:"",
           isDrumKitDisplayed: false,
     appTimeSeconds: 0,
-    artworksLink:"https://raw.githubusercontent.com/reidan22/assets/main/artworks/"
+    artworksLink:"@/assets/artworks/"
   },
   mutations: {
 

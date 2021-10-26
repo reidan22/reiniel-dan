@@ -4,7 +4,7 @@
       <h5 id="image-title">{{ image.image }}</h5>
       <b-img-lazy
         :src="getImage(image.image)"
-        alt="loading..."
+        :alt="loadingGIF"
         class="base-image"
       />
     </div>
@@ -17,7 +17,12 @@ export default {
   props: ["image"],
   methods: {
     getImage(path) {
-      return this.$store.state.artworksLink + path;
+      return require("@/assets/artworks/" + path);
+    },
+  },
+  computed: {
+    loadingGIF() {
+      return require("@/assets/resources/loading-buffering.gif");
     },
   },
 };
