@@ -13,7 +13,14 @@ export default {
   props: ["image"],
   methods: {
     getImage(path) {
-      return require("@/assets/artworks/" + path);
+      alert(
+        "https://raw.githubusercontent.com/reidan22/reiniel-dan/master/frontend/src/assets/artworks/" +
+          path
+      );
+      return (
+        "https://raw.githubusercontent.com/reidan22/reiniel-dan/master/frontend/src/assets/artworks/" +
+        path
+      );
     },
   },
 };

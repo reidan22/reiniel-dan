@@ -20,7 +20,7 @@
         >
       </b-row>
       <b-row>
-        <a href="/gamefront/index.html"
+        <a href="/reiniel-dan/gamefront/index.html"
           ><i class="fas fa-gamepad"></i> Game Front*</a
         >
       </b-row>

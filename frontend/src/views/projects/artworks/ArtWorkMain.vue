@@ -74,7 +74,10 @@ export default {
       this.sliding = false;
     },
     getImage(path) {
-      return require("@/assets/artworks/" + path);
+      return (
+        "https://raw.githubusercontent.com/reidan22/reiniel-dan/master/frontend/src/assets/artworks/" +
+        path
+      );
     },
     toggleMode() {
       this.mode = !this.mode;
