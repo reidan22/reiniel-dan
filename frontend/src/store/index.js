@@ -8,7 +8,8 @@ export default new Vuex.Store({
     headerColor : "",
     headerBase:"",
           isDrumKitDisplayed: false,
-    appTimeSeconds: 0
+    appTimeSeconds: 0,
+    artworksLink:"https://raw.githubusercontent.com/reidan22/assets/main/artworks/"
   },
   mutations: {
 

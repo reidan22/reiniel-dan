@@ -2,7 +2,11 @@
   <span id="base-component">
     <div class="wrap">
       <h5 id="image-title">{{ image.image }}</h5>
-      <b-img :src="getImage(image.image)" alt="loading..." class="base-image" />
+      <b-img-lazy
+        :src="getImage(image.image)"
+        alt="loading..."
+        class="base-image"
+      />
     </div>
   </span>
 </template>
@@ -13,14 +17,7 @@ export default {
   props: ["image"],
   methods: {
     getImage(path) {
-      alert(
-        "https://raw.githubusercontent.com/reidan22/reiniel-dan/master/frontend/src/assets/artworks/" +
-          path
-      );
-      return (
-        "https://raw.githubusercontent.com/reidan22/reiniel-dan/master/frontend/src/assets/artworks/" +
-        path
-      );
+      return this.$store.state.artworksLink + path;
     },
   },
 };

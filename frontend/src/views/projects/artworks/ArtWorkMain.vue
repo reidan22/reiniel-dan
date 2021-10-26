@@ -39,6 +39,7 @@
                 :src="getImage(data.image)"
                 alt="loading..."
                 class="base-image"
+                loading="lazy"
               />
             </template>
           </b-carousel-slide>
@@ -60,10 +61,11 @@ export default {
   },
   data() {
     return {
-      images: ArtList,
+      imagesList: ArtList,
       mode: true,
       slide: 0,
       sliding: null,
+      images: null,
     };
   },
   methods: {
@@ -74,10 +76,7 @@ export default {
       this.sliding = false;
     },
     getImage(path) {
-      return (
-        "https://raw.githubusercontent.com/reidan22/reiniel-dan/master/frontend/src/assets/artworks/" +
-        path
-      );
+      return this.$store.state.artworksLink + path;
     },
     toggleMode() {
       this.mode = !this.mode;
@@ -86,6 +85,14 @@ export default {
   mounted() {
     this.$store.commit("changeHeaderColor", "#b3b3b3");
     this.$store.commit("changeHeaderBase", "#3d3d3d");
+
+    for (let i = this.imagesList.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i);
+      const temp = this.imagesList[i];
+      this.imagesList[i] = this.imagesList[j];
+      this.imagesList[j] = temp;
+    }
+    this.images = this.imagesList;
   },
   computed: {},
 };
