@@ -1,7 +1,7 @@
 <template>
   <span id="base-component">
     <div class="wrap">
-      <h5 id="image-title">{{ image.title }}</h5>
+      <h5 id="image-title" class="centrify">{{ image.title }}</h5>
       <b-img-lazy
         :src="getImage(image.image)"
         :alt="loadingGIF"
@@ -62,6 +62,8 @@ img:hover {
 #image-title {
   position: relative;
   top: 14rem;
+  width: auto;
+  height: 50px;
 }
 
 @media only screen and (max-width: 500px) {

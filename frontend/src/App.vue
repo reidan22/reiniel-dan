@@ -42,6 +42,7 @@ html,
 body {
   margin: 0px;
   padding: 0px;
+  user-select: none;
 }
 #app {
   /* font-family: Helvetica, Avenir, Arial, sans-serif; */
@@ -72,6 +73,14 @@ button {
 }
 .m0 {
   margin: 0px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 /*
 Colors:

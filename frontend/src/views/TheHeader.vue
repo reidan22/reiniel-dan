@@ -18,6 +18,9 @@
         <router-link to="/projects/artworks"
           ><i class="fas fa-paint-brush" /> Artworks</router-link
         >
+        <router-link to="/projects/data_science"
+          ><i class="fas fa-tablets"></i> Data Science</router-link
+        >
       </b-row>
       <b-row>
         <a href="/reiniel-dan/gamefront/index.html"

@@ -1,8 +1,15 @@
 <template>
   <b-container fluid id="drum-kit" class="centrify">
     <b-col>
-      <drum-kit-header id="drim-kit-header" class="centrify"
-        >Vue JS Mini DRUM KIT<i
+      <drum-kit-header id="drim-kit-header" class="centrify">
+        <span id="color-tabs">
+          <i class="fas fa-square-full bg-1" />
+          <i class="fas fa-square-full bg-2" />
+          <i class="fas fa-square-full bg-3" />
+          <i class="fas fa-square-full bg-4" />
+        </span>
+
+        Vue JS Mini DRUM KIT<i
           :class="{
             fas: true,
             'fa-drum': true,
@@ -32,7 +39,7 @@ export default {
     DrumKitBody,
   },
   data() {
-    return { mode: true };
+    return { mode: false };
   },
   methods: {
     toggleMode() {
@@ -92,10 +99,35 @@ export default {
   transition: all 0.5s ease;
 }
 .style-icon {
-  box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.7);
-  border-radius: 200px;
+  box-shadow: 0px 0px 10px rgba(255, 184, 103, 0.7);
+  border-radius: 150px;
   background-color: rgb(211, 172, 55);
   border: 7px solid rgb(211, 172, 55);
   color: rgb(241, 227, 188);
+}
+
+.bg-1 {
+  color: rgb(255, 203, 46);
+}
+
+.bg-2 {
+  color: rgb(75, 198, 255);
+}
+
+.bg-3 {
+  color: rgb(255, 75, 159);
+}
+
+.bg-4 {
+  color: rgb(75, 255, 150);
+}
+
+.fas.fa-square-full {
+  font-size: 20px;
+  margin: 0px 3px;
+}
+
+#color-tabs {
+  width: auto;
 }
 </style>

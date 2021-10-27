@@ -23,4 +23,4 @@ git commit -m 'deploy'
 # git push -f git@github.com:reidan22/dan-site.git main:gh-pages
 git push -f git@github.com:reidan22/reiniel-dan.git master:gh-pages
 
-cd -
+cd ..

@@ -12,7 +12,9 @@
         ></the-header>
       </span>
     </a>
-    <the-body></the-body>
+    <transition name="fade">
+      <the-body></the-body>
+    </transition>
   </b-container>
 </template>
 

@@ -5,6 +5,12 @@ import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import DrumKitMain from "@/views/projects/drumkit/DrumKitMain.vue";
 import ArtWorkMain from "@/views/projects/artworks/ArtWorkMain.vue";
+import DataScienceMain from "@/views/projects/datascience/DataScienceMain.vue";
+import DataScienceIsFraud from "@/views/projects/datascience/DataScienceIsFraud.vue";
+import DataScienceSpotify from "@/views/projects/datascience/DataScienceSpotify.vue";
+import DataScienceMooe from "@/views/projects/datascience/DataScienceMooe.vue";
+import DataScienceHireEducation from "@/views/projects/datascience/DataScienceHireEducation.vue";
+import DataScienceCheckApp from "@/views/projects/datascience/DataScienceCheckApp.vue";
 
 Vue.use(VueRouter);
 
@@ -30,6 +36,42 @@ const routes = [
     path: "/projects/artworks",
     name: "ArtWorks",
     component: ArtWorkMain,
+  }, {
+    path: "/projects/data_science",
+    name: "DataScience",
+    component: DataScienceMain,
+    children: [
+      {
+    path: "is_fraud",
+    name: "DataScienceIsFraud",
+    component: DataScienceIsFraud,
+
+      }    , 
+       {
+    path: "spotify",
+    name: "DataScienceSpotify",
+    component: DataScienceSpotify,
+
+      },
+             {
+    path: "checkapp",
+    name: "DataScienceCheckApp",
+    component: DataScienceCheckApp,
+
+      },
+             {
+    path: "hire_education",
+    name: "DataScienceHireEducation",
+    component: DataScienceHireEducation,
+
+      },
+             {
+    path: "mooe",
+    name: "DataScienceMooe",
+    component: DataScienceMooe,
+
+      },
+    ]
   }, 
 ];
 
