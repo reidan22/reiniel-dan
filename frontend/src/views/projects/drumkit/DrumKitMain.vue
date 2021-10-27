@@ -8,6 +8,7 @@
             'fa-drum': true,
             'tilt-left': mode,
             'tilt-right': !mode,
+            'style-icon': true,
           }"
           @click="toggleMode()"
         ></i
@@ -89,5 +90,12 @@ export default {
 .tilt-right {
   transform: rotate(-10deg);
   transition: all 0.5s ease;
+}
+.style-icon {
+  box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.7);
+  border-radius: 200px;
+  background-color: rgb(211, 172, 55);
+  border: 7px solid rgb(211, 172, 55);
+  color: rgb(241, 227, 188);
 }
 </style>

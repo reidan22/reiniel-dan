@@ -1,7 +1,7 @@
 <template>
   <span id="base-component">
     <div class="wrap">
-      <h5 id="image-title">{{ image.image }}</h5>
+      <h5 id="image-title">{{ image.title }}</h5>
       <b-img-lazy
         :src="getImage(image.image)"
         :alt="loadingGIF"
@@ -17,7 +17,7 @@ export default {
   props: ["image"],
   methods: {
     getImage(path) {
-      return require("@/assets/artworks/" + path);
+      return require("@/assets/artworks/arts/" + path);
     },
   },
   computed: {

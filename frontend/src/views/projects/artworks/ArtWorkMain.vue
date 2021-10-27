@@ -76,7 +76,7 @@ export default {
       this.sliding = false;
     },
     getImage(path) {
-      return require("@/assets/artworks/" + path);
+      return require("@/assets/artworks/arts/" + path);
     },
     toggleMode() {
       this.mode = !this.mode;

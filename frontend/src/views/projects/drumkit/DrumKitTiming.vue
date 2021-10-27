@@ -1,6 +1,12 @@
 <template>
   <b-row id="drum-kit-timing">
-    <b-col id="timing-title" cols="1" class="centrify">{{ sound.name }}</b-col>
+    <b-col
+      id="timing-title"
+      cols="1"
+      class="centrify"
+      @click="playTitleSound()"
+      >{{ sound.name }}</b-col
+    >
     <b-col
       v-for="(timing, timingIndex) in sound.timing"
       :key="timingIndex"
@@ -18,11 +24,16 @@
         }"
       >
         {{ playSound(timingIndex, getSecondsNow, timing) }}
-        <i v-if="timing === 1" class="fas fa-dice-one" />
-        <i v-if="timing === 2" class="fas fa-dice-two" />
-        <i v-if="timing === 3" class="fas fa-dice-three" />
-        <i v-if="timing === 4" class="fas fa-dice-four" /></button
-    ></b-col>
+        <span v-if="timing === 1">1</span>
+        <span v-if="timing === 2">2</span>
+        <span v-if="timing === 3">3</span>
+        <span v-if="timing === 4">4</span>
+        <!-- <i v-if="timing === 1" class="fas fa-dice-one" /> -->
+        <!-- <i v-if="timing === 2" class="fas fa-dice-two" /> -->
+        <!-- <i v-if="timing === 3" class="fas fa-dice-three" /> -->
+        <!-- <i v-if="timing === 4" class="fas fa-dice-four" /> -->
+      </button></b-col
+    >
   </b-row>
 </template>
 
@@ -44,8 +55,10 @@ export default {
       this.sound.timing[timeIndex] = this.sound.timing[timeIndex] % 5;
       this.$forceUpdate();
     },
+    playTitleSound() {
+      new Audio(this.sound.audio).play();
+    },
     playSound(timingIndex, getSecondsNow, timing) {
-      console.log("timing is... " + timing);
       if (timingIndex === getSecondsNow && timing) {
         let beat1 = new Audio(this.sound.audio);
         let beat2 = new Audio(this.sound.audio);
@@ -106,6 +119,11 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+span {
+  font-family: "Anton", sans-serif;
+  font-size: 150%;
+}
 #drum-kit-timing {
   color: var(--header-base);
   font-size: 30%;
@@ -127,7 +145,6 @@ button {
   background: none;
   outline: none;
   border: none;
-  cursor: none;
   border-radius: 7px;
   transition: all 0.5s ease;
 }
