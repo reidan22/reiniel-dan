@@ -6,7 +6,8 @@
     </b-col>
     <b-col cols="4" class="row-button centrify" v-if="!isLoaded">
       <button id="art-work-front-button" class="centrify" @click="hideFront()">
-        ENTER
+        &nbsp;ENTER&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-chevron-right"></i
+        >&nbsp;
       </button>
     </b-col>
     <b-row id="art-work-front" class="centrify" v-if="!isLoaded">
@@ -111,16 +112,11 @@ export default {
 
 #art-work-front-button:hover,
 #art-work-front-button:active {
-  border: 1px solid var(--header-color);
+  border: 1px solid var(--header-base);
   transition: all 0.5s ease;
 }
 
-.row-button {
-  width: 100vw;
-}
-
 .row-logo {
-  width: 100vw;
   z-index: 20;
   transform: scale(5);
   font-family: "Encode Sans Condensed", sans-serif;
