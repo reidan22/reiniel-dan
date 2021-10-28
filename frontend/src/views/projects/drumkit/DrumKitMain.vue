@@ -130,4 +130,33 @@ export default {
 #color-tabs {
   width: auto;
 }
+
+@media only screen and (max-width: 500px) {
+  .style-icon {
+    margin-left: 15px;
+    border: 1px solid rgb(211, 172, 55);
+  }
+  .bg-1 {
+    transform: scale(0.75);
+    transition: all 0.5s ease;
+  }
+
+  .bg-2 {
+    transform: scale(0.75);
+    transition: all 0.5s ease;
+  }
+
+  .bg-3 {
+    transform: scale(0.75);
+    transition: all 0.5s ease;
+  }
+
+  .bg-4 {
+    transform: scale(0.75);
+    transition: all 0.5s ease;
+  }
+  #color-tabs {
+    padding: 0px;
+  }
+}
 </style>

@@ -9,7 +9,8 @@ export default new Vuex.Store({
     headerBase:"",
           isDrumKitDisplayed: false,
     appTimeSeconds: 0,
-    artworksLink:"@/assets/artworks/"
+    artworksLink:"@/assets/artworks/",
+    isArtWorkLoaded: false
   },
   mutations: {
 
@@ -24,6 +25,9 @@ export default new Vuex.Store({
     },
     countUpAppTimeSeconds(state, payload){
       state.appTimeSeconds = Math.floor(payload)
+    },
+    artWorkIsLoaded(state){
+      state.isArtWorkLoaded = true
     }
   },
   actions: {},

@@ -1,13 +1,11 @@
 <template>
   <span id="base-component">
-    <div class="wrap">
-      <h5 id="image-title" class="centrify">{{ image.title }}</h5>
-      <b-img-lazy
-        :src="getImage(image.image)"
-        :alt="loadingGIF"
-        class="base-image"
-      />
-    </div>
+    <h5 id="image-title" class="centrify">{{ image.title }}</h5>
+    <b-img-lazy
+      :src="getImage(image.image)"
+      alt="loading..."
+      class="base-image"
+    />
   </span>
 </template>
 
@@ -32,13 +30,13 @@ export default {
 .base-image {
   height: 25vw;
   width: auto;
-  border: 0.25vw solid white;
+  border: 0.25vw solid var(--header-base);
   border-radius: 0px;
-  margin: 10px 5px;
 }
 
 img {
-  margin: 10px 5px;
+  border: 0.25vw solid var(--header-base);
+  margin: auto;
   transition: all 0.5s ease;
   opacity: 1;
 }
@@ -56,27 +54,29 @@ img:hover {
 
 #base-component:hover {
   transition: all 0.5s ease;
-  color: rgb(0, 0, 0);
+  color: var(--header-base);
 }
 
 #image-title {
   position: relative;
-  top: 14rem;
-  width: auto;
-  height: 50px;
+  top: 50%;
 }
-
+.wrap {
+  width: auto;
+  height: auto;
+  background: red;
+}
 @media only screen and (max-width: 500px) {
   .base-image {
     height: auto;
     width: 40vh;
-    border: 2vw solid white;
+    border: 2vw solid var(--header-base);
     border-radius: 0px;
     margin: 0px 5px;
   }
 
   img {
-    margin: 10px 5px;
+    margin: 5px 5px;
     transition: all 0.5s ease;
   }
 
@@ -92,7 +92,7 @@ img:hover {
 
   #base-component:hover {
     transition: all 0.5s ease;
-    color: rgb(0, 0, 0);
+    color: var(--header-color);
   }
 
   #image-title {

@@ -3,7 +3,7 @@
     <b-col>
       <b-row id="art-work-header">
         <art-work-header class="centrify art-work-header"
-          >Artworks<i
+          >ARTWORKS<i
             @click="toggleMode()"
             :class="{
               fas: true,
@@ -14,7 +14,11 @@
         /></art-work-header>
       </b-row>
       <b-row id="art-work-body" v-if="mode">
-        <b-col v-for="data in imagesShuffled" :key="data.key">
+        <b-col
+          v-for="data in imagesShuffled"
+          :key="data.key"
+          class="base-image"
+        >
           <base-art-work-image :image="data"></base-art-work-image>
         </b-col>
       </b-row>
@@ -25,7 +29,7 @@
           :interval="4000"
           controls
           indicators
-          background="#ababab"
+          background="transparent"
           @sliding-start="onSlideStart"
           @sliding-end="onSlideEnd"
           class="centrify"
@@ -34,11 +38,13 @@
             v-for="data in imagesShuffled"
             :key="data.key"
             id="carousel-slide"
-            ><template #img>
+          >
+            <template #img>
+              <p class="carousel-title">{{ data.title }}</p>
               <img
                 :src="getImage(data.image)"
                 :alt="loadingGIF"
-                class="base-image"
+                class="base-image-carousel"
                 loading="lazy"
               />
             </template>
@@ -83,8 +89,8 @@ export default {
     },
   },
   mounted() {
-    this.$store.commit("changeHeaderColor", "#b3b3b3");
-    this.$store.commit("changeHeaderBase", "#3d3d3d");
+    this.$store.commit("changeHeaderColor", "#171b25");
+    this.$store.commit("changeHeaderBase", "white");
 
     for (let i = this.images.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * i);
@@ -108,44 +114,43 @@ export default {
   font-family: "Spartan", sans-serif;
   font-weight: 800;
   font-size: 3vw;
-  background: rgb(134, 134, 134);
-  background: linear-gradient(
-    45deg,
-    rgba(134, 134, 134, 1) 0%,
-    rgba(164, 162, 162, 1) 34%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: var(--header-color);
   width: 100vw;
   height: 100vh;
-  color: #585858;
+  color: var(--header-base);
 }
 
 #art-work-header {
   height: auto;
-  margin: 1vw 25vw;
-  border-bottom: 2px solid #505050;
+  margin: 0vw 25vw;
+  border-bottom: 2px solid var(--header-base);
 }
 
 #art-work-body {
-  background: linear-gradient(
-    -322deg,
-    rgba(134, 134, 134, 1) 0%,
-    rgba(164, 162, 162, 1) 34%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: var(--header-color);
   height: 90vh;
   border-radius: 10px;
-  margin: 0px 1vw;
   overflow-x: auto;
 }
 .base-image {
-  height: 35vw;
+  height: auto;
   width: auto;
-  border: 0.25vw solid white;
+  margin: 0px;
+  padding: 0px;
+  /* border: 0.25vw solid var(--header-base); */
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+
+.base-image-carousel {
+  height: 75vh;
+  width: auto;
+  border: 0.25vw solid var(--header-base);
   border-radius: 0px;
   transition: all 0.5s ease;
   margin: 10px 5px;
 }
+
 #carousel-1 {
   border-radius: 10px;
   transition: all 0.5s ease;
@@ -169,23 +174,31 @@ a.carousel-control-prev {
   transition: all 0.5s ease;
 }
 
-a.carousel-control-next:hover {
-  transition: all 0.5s ease;
-  background: linear-gradient(
-    270deg,
-    rgba(56, 56, 56, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
+a.carousel-control-next:hover,
 a.carousel-control-prev:hover {
   transition: all 0.5s ease;
-  background: linear-gradient(
-    90deg,
-    rgba(56, 56, 56, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: rgba(255, 255, 255, 0.418);
+}
+.carousel-control-prev-icon {
+  transition: all 0.5s ease;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+.carousel-control-next-icon {
+  transition: all 0.5s ease;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+.carousel-control-prev-icon:hover {
+  transition: all 0.5s ease;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23171b25' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+.carousel-control-next-icon:hover {
+  transition: all 0.5s ease;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23171b25' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
+.carousel-title {
+  font-size: 1rem;
+}
 @media only screen and (max-width: 500px) {
   #art-work {
     font-weight: 800;
@@ -200,10 +213,10 @@ a.carousel-control-prev:hover {
     border-bottom: none;
   }
 
-  .base-image {
+  .base-image,
+  .base-image-carousel {
     height: auto;
     width: 45vh;
-    border: 2vw solid white;
     border-radius: 0px;
     margin: 0px 5px;
     transition: all 0.5s ease;

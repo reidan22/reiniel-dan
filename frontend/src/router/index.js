@@ -5,6 +5,7 @@ import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import DrumKitMain from "@/views/projects/drumkit/DrumKitMain.vue";
 import ArtWorkMain from "@/views/projects/artworks/ArtWorkMain.vue";
+import ArtWorkFront from "@/views/projects/artworks/ArtWorkFront.vue";
 import DataScienceMain from "@/views/projects/datascience/DataScienceMain.vue";
 import DataScienceIsFraud from "@/views/projects/datascience/DataScienceIsFraud.vue";
 import DataScienceSpotify from "@/views/projects/datascience/DataScienceSpotify.vue";
@@ -35,7 +36,12 @@ const routes = [
   },  {
     path: "/projects/artworks",
     name: "ArtWorks",
-    component: ArtWorkMain,
+    component: ArtWorkFront,
+    children: [{
+    path: "main",
+    name: "ArtWorkMain",
+    component: ArtWorkMain,}
+    ]
   }, {
     path: "/projects/data_science",
     name: "DataScience",

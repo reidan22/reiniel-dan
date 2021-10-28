@@ -86,7 +86,7 @@ export default {
     padding: 0px;
   }
   .page-number {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   img {
