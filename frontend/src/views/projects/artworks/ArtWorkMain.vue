@@ -1,19 +1,15 @@
 <template>
   <b-container fluid id="art-work" class="centrify">
     <b-col>
-      <b-row id="art-work-header">
-        <art-work-header class="centrify art-work-header"
-          >ARTWORKS<i
-            @click="toggleMode()"
-            :class="{
-              fas: true,
-              'fa-toggle-off': !mode,
-              'fa-toggle-on': mode,
-            }"
-            id="toggle"
-        /></art-work-header>
+      <b-row id="art-work-header" class="centrify">
+        <b-col @click="setMode(0)" class="art-header-col centrify"
+          >Gallery</b-col
+        >
+        <b-col @click="setMode(1)" class="art-header-col centrify"
+          >Slideshow</b-col
+        ><b-col @click="" class="art-header-col centrify"> About</b-col>
       </b-row>
-      <b-row id="art-work-body" v-if="mode">
+      <b-row id="art-work-body" v-if="mode === 0">
         <b-col
           v-for="data in imagesShuffled"
           :key="data.key"
@@ -22,7 +18,7 @@
           <base-art-work-image :image="data"></base-art-work-image>
         </b-col>
       </b-row>
-      <b-row id="art-work-body" v-else class="centrify">
+      <b-row id="art-work-body" v-if="mode === 1" class="centrify">
         <b-carousel
           id="carousel-1"
           v-model="slide"
@@ -69,7 +65,7 @@ export default {
     return {
       images: ArtList,
       imagesShuffled: null,
-      mode: true,
+      mode: 0,
       slide: 0,
       sliding: null,
     };
@@ -86,6 +82,9 @@ export default {
     },
     toggleMode() {
       this.mode = !this.mode;
+    },
+    setMode(mode) {
+      this.mode = mode;
     },
   },
   mounted() {
@@ -112,7 +111,6 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800&display=swap");
 #art-work {
   font-family: "Spartan", sans-serif;
-  font-weight: 800;
   font-size: 3vw;
   background: var(--header-color);
   width: 100vw;
@@ -124,6 +122,7 @@ export default {
   height: auto;
   margin: 0vw 25vw;
   border-bottom: 2px solid var(--header-base);
+  font-size: 1vw;
 }
 
 #art-work-body {
@@ -137,7 +136,6 @@ export default {
   width: auto;
   margin: 0px;
   padding: 0px;
-  /* border: 0.25vw solid var(--header-base); */
   border-radius: 0px;
   transition: all 0.5s ease;
 }
@@ -199,18 +197,35 @@ a.carousel-control-prev:hover {
 .carousel-title {
   font-size: 1rem;
 }
+
+.carousel-title:hover {
+  font-size: 1rem;
+}
+
+.art-header-col {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-top: 1px solid var(--header-base);
+  height: 3vw;
+}
+
+.art-header-col:hover {
+  cursor: pointer;
+  color: var(--header-color);
+  background-color: var(--header-base);
+  transition: all 0.5s ease;
+}
+
 @media only screen and (max-width: 500px) {
-  #art-work {
-    font-weight: 800;
-    font-size: 11vw;
-    width: 100vw;
-  }
   #art-work-header {
-    width: 100vw;
-    margin: 0px 25vw;
+    width: 80vw;
+    margin: 0px 0px;
+    margin-left: auto;
     position: relative;
     left: 20px;
     border-bottom: none;
+    font-size: 3vw;
+    font-weight: 400;
   }
 
   .base-image,
@@ -225,6 +240,14 @@ a.carousel-control-prev:hover {
     text-shadow: 1px 1px 2px #333;
     height: 90vh;
     width: 100vw;
+    transition: all 0.5s ease;
+  }
+
+  .art-header-col {
+    border-top: none;
+    height: 10vw;
+  }
+  .art-header-col:hover {
     transition: all 0.5s ease;
   }
 }

@@ -77,7 +77,7 @@ a {
   text-decoration: none;
   transition: font-size 0.5s;
   padding: 10px;
-  /* border-bottom: 0.1px solid var(--header-color); */
+  border-bottom: 0.1px solid var(--header-color);
 }
 
 a:hover,

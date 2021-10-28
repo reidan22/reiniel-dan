@@ -14,22 +14,23 @@
 </template>
 
 <script>
+let hellos = [
+  "Hello",
+  "Kumusta",
+  "你好",
+  "今日は",
+  "안녕하세요",
+  "Bonjour",
+  "Hola",
+];
 export default {
   name: "TheFront",
   components: {},
   data() {
     return {
       showFrontElement: true,
-      helloArray: [
-        "Hello",
-        "Kumusta",
-        "你好",
-        "今日は",
-        "안녕하세요",
-        "Bonjour",
-        "Hola",
-      ],
-      currentHello: "Kumusta",
+      helloArray: hellos,
+      currentHello: hellos[Math.floor(Math.random() * 7)],
       bgImage: require("@/assets/background/front_element_bg.jpg"),
     };
   },
