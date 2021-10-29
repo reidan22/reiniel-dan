@@ -27,9 +27,9 @@
         ></router-link>
       </b-col>
     </b-row>
-    <transition name="fade">
-      <router-view id="ds_body" class="centrify" />
-    </transition>
+    <!-- <transition name="fade"> -->
+    <router-view id="ds_body" class="centrify" />
+    <!-- </transition> -->
   </b-container>
 </template>
 
@@ -39,6 +39,7 @@ export default {
   components: {},
   mounted() {
     this.$store.commit("changeHeaderBase", "black");
+    this.$store.commit("changeHeaderBorder", "black");
     this.$store.commit("changeHeaderColor", "white");
   },
 };
@@ -56,6 +57,7 @@ export default {
   font-size: 2vw;
   background-color: var(--header-color);
   margin-left: 50vw;
+  color: var(--header-color);
 }
 #ds_body {
   font-size: 2rem;

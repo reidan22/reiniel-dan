@@ -4,8 +4,11 @@ import TheMain from "@/views/TheMain.vue";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import DrumKitMain from "@/views/projects/drumkit/DrumKitMain.vue";
+
 import ArtWorkMain from "@/views/projects/artworks/ArtWorkMain.vue";
 import ArtWorkFront from "@/views/projects/artworks/ArtWorkFront.vue";
+import BaseArtWork from '@/components/BaseArtWork.vue'
+
 import DataScienceMain from "@/views/projects/datascience/DataScienceMain.vue";
 import DataScienceIsFraud from "@/views/projects/datascience/DataScienceIsFraud.vue";
 import DataScienceSpotify from "@/views/projects/datascience/DataScienceSpotify.vue";
@@ -37,10 +40,17 @@ const routes = [
     path: "/projects/artworks",
     name: "ArtWorks",
     component: ArtWorkFront,
-    children: [{
+    children: [
+      {
     path: "main",
     name: "ArtWorkMain",
-    component: ArtWorkMain,}
+    component: ArtWorkMain},
+        {
+    path: ":id",
+    name: "BaseArtWork",
+    component: BaseArtWork,
+    props:true
+  }
     ]
   }, {
     path: "/projects/data_science",
@@ -81,10 +91,20 @@ const routes = [
   }, 
 ];
 
+const scrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition) {
+    return savedPosition;
+  } else {
+    return { x: 0, y: 0 }
+  }
+};
+
+
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+ 
 });
 
 export default router;

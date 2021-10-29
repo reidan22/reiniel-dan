@@ -3,792 +3,715 @@
             "key": "1",
             "image": "art (1).jpg",
             "title": "Ariana Grande",
-            "caption": "-"
+            "caption": ""
         },
         {
             "key": "2",
             "image": "art (2).jpg",
-            "title": "Soul Smith",
-            "caption": "-"
+            "title": "Soulsmith Sticker",
+            "caption": ""
         },
         {
             "key": "3",
             "image": "art (3).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "Dinglepus Sticker",
+            "caption": ""
         },
         {
             "key": "4",
             "image": "art (4).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "Koro-sensei",
+            "caption": ""
         },
         {
             "key": "5",
             "image": "art (5).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "Beastboy 2018",
+            "caption": ""
         },
         {
             "key": "6",
             "image": "art (6).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "Charlie Puth",
+            "caption": ""
         },
         {
             "key": "7",
             "image": "art (7).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "Asymptote 1",
+            "caption": ""
         },
         {
             "key": "8",
             "image": "art (8).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "Sabrina",
+            "caption": ""
         },
         {
             "key": "9",
             "image": "art (9).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "Vanya",
+            "caption": ""
         },
         {
             "key": "10",
             "image": "art (10).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "J-17/R-22 Sticker",
+            "caption": ""
         },
         {
             "key": "11",
             "image": "art (11).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "Hook",
+            "caption": ""
         },
         {
             "key": "12",
             "image": "art (12).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "King PT Sticker",
+            "caption": ""
         },
-        {
-            "key": "13",
-            "image": "art (13).jpg",
-            "title": "-",
-            "caption": "-"
-        },
-        {
-            "key": "14",
-            "image": "art (14).jpg",
-            "title": "-",
-            "caption": "-"
-        },
+ 
         {
             "key": "15",
             "image": "art (15).jpg",
-            "title": "-",
-            "caption": "-"
+            "title": "Sticker Set",
+            "caption": ""
         },
-        {
-            "key": "16",
-            "image": "art (16).jpg",
-            "title": "-",
-            "caption": "-"
-        },
+  
         {
             "key": "17",
             "image": "art (1).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Wiccan",
+            "caption": ""
         },
         {
             "key": "18",
             "image": "art (2).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Yukio",
+            "caption": ""
         },
         {
             "key": "19",
             "image": "art (3).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Random Male Sketch",
+            "caption": ""
         },
         {
             "key": "20",
             "image": "art (4).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Grass-type starters Pokemon",
+            "caption": ""
         },
-        {
-            "key": "21",
-            "image": "art (5).png",
-            "title": "-",
-            "caption": "-"
-        },
+    
         {
             "key": "22",
             "image": "art (6).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Sketch 1",
+            "caption": ""
         },
         {
             "key": "23",
             "image": "art (7).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Elesa PKMN",
+            "caption": ""
         },
         {
             "key": "24",
             "image": "art (8).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Gaang",
+            "caption": ""
         },
-        {
-            "key": "25",
-            "image": "art (9).png",
-            "title": "-",
-            "caption": "-"
-        },
+
         {
             "key": "26",
             "image": "art (10).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Hayley Williams",
+            "caption": ""
         },
         {
             "key": "27",
             "image": "art (11).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Darumaka Formes",
+            "caption": ""
         },
         {
             "key": "28",
             "image": "art (12).png",
-            "title": "-",
-            "caption": "-"
+            "title": "We Bare Bears",
+            "caption": ""
         },
         {
             "key": "29",
             "image": "art (13).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Starfire 2019",
+            "caption": ""
         },
         {
             "key": "30",
             "image": "art (14).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Mockingjay",
+            "caption": ""
         },
         {
             "key": "31",
             "image": "art (15).png",
-            "title": "-",
-            "caption": "-"
+            "title": "It's here...",
+            "caption": ""
         },
         {
             "key": "32",
             "image": "art (16).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Meet cute",
+            "caption": ""
         },
         {
             "key": "33",
             "image": "art (17).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Random Female Sketch",
+            "caption": ""
         },
         {
             "key": "34",
             "image": "art (18).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Alola PKMN",
+            "caption": ""
         },
         {
             "key": "35",
             "image": "art (19).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Angel/Devil",
+            "caption": ""
         },
         {
             "key": "36",
             "image": "art (20).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Anklebite",
+            "caption": ""
         },
-        {
-            "key": "37",
-            "image": "art (21).png",
-            "title": "-",
-            "caption": "-"
-        },
+ 
         {
             "key": "38",
             "image": "art (22).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Elesa Cover",
+            "caption": ""
         },
         {
             "key": "39",
             "image": "art (23).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Baby Bochog",
+            "caption": ""
         },
         {
             "key": "40",
             "image": "art (24).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Beastboy 2019",
+            "caption": ""
         },
-        {
-            "key": "41",
-            "image": "art (25).png",
-            "title": "-",
-            "caption": "-"
-        },
+
         {
             "key": "42",
             "image": "art (26).png",
-            "title": "-",
-            "caption": "-"
+            "title": "idontwannabeyou",
+            "caption": ""
         },
         {
             "key": "43",
             "image": "art (27).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Black Mage",
+            "caption": ""
         },
         {
             "key": "44",
             "image": "art (28).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Bloom",
+            "caption": ""
         },
         {
             "key": "45",
             "image": "art (29).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Blossom.exe",
+            "caption": ""
         },
         {
             "key": "46",
             "image": "art (30).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Bubble.exe",
+            "caption": ""
         },
         {
             "key": "47",
             "image": "art (31).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Bunny Girl",
+            "caption": ""
         },
         {
             "key": "48",
             "image": "art (32).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Call me by your name",
+            "caption": ""
         },
         {
             "key": "49",
             "image": "art (33).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Kittehns",
+            "caption": ""
         },
         {
             "key": "50",
             "image": "art (34).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Cyborg 2018",
+            "caption": ""
         },
         {
             "key": "51",
             "image": "art (35).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 1",
+            "caption": ""
         },
         {
             "key": "52",
             "image": "art (36).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 2",
+            "caption": ""
         },
         {
             "key": "53",
             "image": "art (37).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 3",
+            "caption": ""
         },
         {
             "key": "54",
             "image": "art (38).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 4",
+            "caption": ""
         },
         {
             "key": "55",
             "image": "art (39).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 5",
+            "caption": ""
         },
         {
             "key": "56",
             "image": "art (40).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 6",
+            "caption": ""
         },
         {
             "key": "57",
             "image": "art (41).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 7",
+            "caption": ""
         },
         {
             "key": "58",
             "image": "art (42).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 8",
+            "caption": ""
         },
         {
             "key": "59",
             "image": "art (43).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 11",
+            "caption": ""
         },
         {
             "key": "60",
             "image": "art (44).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 12",
+            "caption": ""
         },
         {
             "key": "61",
             "image": "art (45).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 13",
+            "caption": ""
         },
         {
             "key": "62",
             "image": "art (46).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 14",
+            "caption": ""
         },
         {
             "key": "63",
             "image": "art (47).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 15",
+            "caption": ""
         },
         {
             "key": "64",
             "image": "art (48).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 16",
+            "caption": ""
         },
         {
             "key": "65",
             "image": "art (49).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Inktober 2019 - Day 17",
+            "caption": ""
         },
         {
             "key": "66",
             "image": "art (50).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Marshy",
+            "caption": ""
         },
         {
             "key": "67",
             "image": "art (51).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Lipad Darna",
+            "caption": ""
         },
         {
             "key": "68",
             "image": "art (52).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Overgrown sketch",
+            "caption": ""
         },
         {
             "key": "69",
             "image": "art (53).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Squidgirl sketch",
+            "caption": ""
         },
         {
             "key": "70",
             "image": "art (54).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Mermaid sketch",
+            "caption": ""
         },
         {
             "key": "71",
             "image": "art (55).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Random female sketch",
+            "caption": ""
         },
         {
             "key": "72",
             "image": "art (56).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Character male sketch",
+            "caption": ""
         },
         {
             "key": "73",
             "image": "art (57).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Character female sketch",
+            "caption": ""
         },
         {
             "key": "74",
             "image": "art (58).png",
-            "title": "-",
-            "caption": "-"
+            "title": "God of Death",
+            "caption": ""
         },
-        {
-            "key": "75",
-            "image": "art (59).png",
-            "title": "-",
-            "caption": "-"
-        },
+
         {
             "key": "76",
             "image": "art (60).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Queen",
+            "caption": ""
         },
-        {
-            "key": "77",
-            "image": "art (61).png",
-            "title": "-",
-            "caption": "-"
-        },
+  
         {
             "key": "78",
             "image": "art (62).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Tracy/Mother",
+            "caption": ""
         },
         {
             "key": "79",
             "image": "art (63).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Ally",
+            "caption": ""
         },
         {
             "key": "80",
             "image": "art (64).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Random female art",
+            "caption": ""
         },
         {
             "key": "81",
             "image": "art (65).png",
-            "title": "-",
-            "caption": "-"
-        },
-        {
-            "key": "82",
-            "image": "art (66).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Buttercup.exe",
+            "caption": ""
         },
         {
             "key": "83",
             "image": "art (67).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Scribble King",
+            "caption": ""
         },
         {
             "key": "84",
             "image": "art (68).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Red King",
+            "caption": ""
         },
         {
             "key": "85",
             "image": "art (69).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Random female art",
+            "caption": ""
         },
-        {
-            "key": "86",
-            "image": "art (70).png",
-            "title": "-",
-            "caption": "-"
-        },
+ 
         {
             "key": "87",
             "image": "art (71).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Sanguine",
+            "caption": ""
         },
         {
             "key": "88",
             "image": "art (72).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Fire Golem",
+            "caption": ""
         },
-        {
-            "key": "89",
-            "image": "art (73).png",
-            "title": "-",
-            "caption": "-"
-        },
+
         {
             "key": "90",
             "image": "art (74).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Bennett sketch",
+            "caption": ""
         },
         {
             "key": "91",
             "image": "art (75).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Piplup and Eevee",
+            "caption": ""
         },
         {
             "key": "92",
             "image": "art (76).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Solosis and Gothita",
+            "caption": ""
         },
         {
             "key": "93",
             "image": "art (77).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Harley Quinn sketch",
+            "caption": ""
         },
         {
             "key": "94",
             "image": "art (78).png",
-            "title": "-",
-            "caption": "-"
+            "title": "How to train your dragon",
+            "caption": ""
         },
         {
             "key": "95",
             "image": "art (79).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Ekseksayay icon",
+            "caption": ""
         },
         {
             "key": "96",
             "image": "art (80).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Asymptote 2",
+            "caption": ""
         },
         {
             "key": "97",
             "image": "art (81).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Johto PKMN",
+            "caption": ""
         },
         {
             "key": "98",
             "image": "art (82).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Keqing",
+            "caption": ""
         },
         {
             "key": "99",
             "image": "art (83).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Random female art",
+            "caption": ""
         },
         {
             "key": "100",
             "image": "art (84).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Kled",
+            "caption": ""
         },
         {
             "key": "101",
             "image": "art (85).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Kidz Next Door",
+            "caption": ""
         },
         {
             "key": "102",
             "image": "art (86).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Korrasami",
+            "caption": ""
         },
         {
             "key": "103",
             "image": "art (87).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Forest Giant",
+            "caption": ""
         },
         {
             "key": "104",
             "image": "art (88).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Mawile",
+            "caption": ""
         },
-        {
-            "key": "105",
-            "image": "art (89).png",
-            "title": "-",
-            "caption": "-"
-        },
-        {
-            "key": "106",
-            "image": "art (90).png",
-            "title": "-",
-            "caption": "-"
-        },
+ 
+   
         {
             "key": "107",
             "image": "art (91).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Mother and child",
+            "caption": ""
         },
         {
             "key": "108",
             "image": "art (92).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Musharna",
+            "caption": ""
         },
         {
             "key": "109",
             "image": "art (93).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Neku",
+            "caption": ""
         },
         {
             "key": "110",
             "image": "art (94).png",
-            "title": "-",
-            "caption": "-"
+            "title": "NIKI",
+            "caption": ""
         },
         {
             "key": "111",
             "image": "art (95).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Lee",
+            "caption": ""
         },
         {
             "key": "112",
             "image": "art (96).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Broken",
+            "caption": ""
         },
         {
             "key": "113",
             "image": "art (97).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Eevee and Chikorita",
+            "caption": ""
         },
         {
             "key": "114",
             "image": "art (98).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Alola Starters",
+            "caption": ""
         },
         {
             "key": "115",
             "image": "art (99).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Adventure Time",
+            "caption": ""
         },
         {
             "key": "116",
             "image": "art (100).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Random sketch",
+            "caption": ""
         },
         {
             "key": "117",
             "image": "art (101).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Raven 2020",
+            "caption": ""
         },
         {
             "key": "118",
             "image": "art (102).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Raven 2021",
+            "caption": ""
         },
         {
             "key": "119",
             "image": "art (103).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Raven 2019",
+            "caption": ""
         },
         {
             "key": "120",
             "image": "art (104).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Raven 2018",
+            "caption": ""
         },
         {
             "key": "121",
             "image": "art (105).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Ugly Icon",
+            "caption": ""
         },
         {
             "key": "122",
             "image": "art (106).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Roses/Lotus/Violet/Iris ",
+            "caption": ""
         },
         {
             "key": "123",
             "image": "art (107).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Robin 2018",
+            "caption": ""
         },
         {
             "key": "124",
             "image": "art (108).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Fake Happy",
+            "caption": ""
         },
         {
             "key": "125",
             "image": "art (109).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Wanda",
+            "caption": ""
         },
         {
             "key": "126",
             "image": "art (110).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Silver Kid",
+            "caption": ""
         },
         {
             "key": "127",
             "image": "art (111).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Sinnoh PKMN",
+            "caption": ""
         },
         {
             "key": "128",
             "image": "art (112).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Soul and Maka",
+            "caption": ""
         },
         {
             "key": "129",
             "image": "art (113).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Startfire 2018",
+            "caption": ""
         },
-        {
-            "key": "130",
-            "image": "art (114).png",
-            "title": "-",
-            "caption": "-"
-        },
+    
         {
             "key": "131",
             "image": "art (115).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Empty",
+            "caption": ""
         },
         {
             "key": "132",
             "image": "art (116).png",
-            "title": "-",
-            "caption": "-"
+            "title": "Ekseksayay Banner",
+            "caption": ""
         }
     ]

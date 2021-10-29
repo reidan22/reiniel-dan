@@ -2,7 +2,11 @@
   <b-container
     fluid
     id="app"
-    :style="{ '--header-base': headerBase, '--header-color': headerColor }"
+    :style="{
+      '--header-base': headerBase,
+      '--header-color': headerColor,
+      '--header-border': headerBorder,
+    }"
   >
     <the-front></the-front>
     <the-main></the-main>
@@ -30,6 +34,9 @@ export default {
     headerColor() {
       return this.$store.state.headerColor;
     },
+    headerBorder() {
+      return this.$store.state.headerBorder;
+    },
     created() {},
   },
 };
@@ -45,6 +52,7 @@ body {
   margin: 0px;
   padding: 0px;
   user-select: none;
+  scroll-behavior: smooth;
 }
 #app {
   /* font-family: Helvetica, Avenir, Arial, sans-serif; */

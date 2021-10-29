@@ -48,6 +48,7 @@ export default {
   },
   mounted() {
     this.$store.commit("changeHeaderColor", "#F1E3BC");
+    this.$store.commit("changeHeaderBorder", "#b3890d");
     this.$store.commit("changeHeaderBase", "#b3890d");
     this.$store.commit("toggleDrumKitDisplayed", true);
   },

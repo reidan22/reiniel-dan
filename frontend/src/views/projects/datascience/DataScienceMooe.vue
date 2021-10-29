@@ -25,10 +25,12 @@ export default {
   },
   mounted() {
     this.$store.commit("changeHeaderColor", "#c9b487");
+    this.$store.commit("changeHeaderBorder", "#c9b487");
     this.$store.commit("changeHeaderBase", "#2e3236");
   },
   beforeRouteLeave(to, from, next) {
     this.$store.commit("changeHeaderBase", "black");
+    this.$store.commit("changeHeaderBorder", "black");
     this.$store.commit("changeHeaderColor", "white");
     next();
   },

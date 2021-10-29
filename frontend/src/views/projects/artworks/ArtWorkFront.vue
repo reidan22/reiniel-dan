@@ -45,6 +45,7 @@ export default {
   },
   mounted() {
     this.$store.commit("changeHeaderColor", "#171b25");
+    this.$store.commit("changeHeaderBorder", "#171b25");
     this.$store.commit("changeHeaderBase", "white");
 
     for (let i = this.images.length - 1; i > 0; i--) {
@@ -54,7 +55,6 @@ export default {
       this.images[j] = temp;
     }
     this.randomImage = this.images[0];
-    console.log(this.randomImage);
   },
   computed: {
     isLoaded() {
@@ -114,6 +114,8 @@ export default {
 #art-work-front-button:active {
   border: 1px solid var(--header-base);
   transition: all 0.5s ease;
+  background-color: var(--header-base);
+  color: var(--header-color);
 }
 
 .row-logo {
@@ -157,7 +159,7 @@ export default {
   }
 
   .row-logo {
-    transform: scale(1.5) translateX(-10px);
+    transform: scale(1.5);
   }
 }
 </style>

@@ -62,6 +62,7 @@ export default {
 .slideImg {
   border: 5px solid var(--header-base);
   background-color: var(--header-base);
+  border-radius: 15px;
   width: 55vw;
 }
 

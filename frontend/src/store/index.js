@@ -7,29 +7,38 @@ export default new Vuex.Store({
   state: {
     headerColor : "",
     headerBase:"",
-          isDrumKitDisplayed: false,
+    headerBorder:"",
+    isDrumKitDisplayed: false,
     appTimeSeconds: 0,
     artworksLink:"@/assets/artworks/",
-    isArtWorkLoaded: false
+    isArtWorkLoaded: false,
+    currentImage: 11,
   },
   mutations: {
 
     changeHeaderBase(state,payload){
-      state.headerBase = payload
+      state.headerBase = payload;
     } ,
     changeHeaderColor(state,payload){
-      state.headerColor = payload
+      state.headerColor = payload;
+    },    
+    changeHeaderBorder(state,payload){
+      state.headerBorder = payload;
     },
     toggleDrumKitDisplayed(state,payload){
-      state.isDrumKitDisplayed = payload
+      state.isDrumKitDisplayed = payload;
     },
     countUpAppTimeSeconds(state, payload){
-      state.appTimeSeconds = Math.floor(payload)
+      state.appTimeSeconds = Math.floor(payload);
     },
     artWorkIsLoaded(state){
-      state.isArtWorkLoaded = true
-    }
+      state.isArtWorkLoaded = true;
+    },
+    changeCurrentImage(state, payload){
+      state.currentImage = "image_" + payload;
+    },
   },
-  actions: {},
+  actions: {
+  },
   modules: {},
 });

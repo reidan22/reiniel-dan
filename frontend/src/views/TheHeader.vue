@@ -19,12 +19,12 @@
           ><i class="fas fa-paint-brush" /> Artworks</router-link
         >
         <router-link to="/projects/data_science"
-          ><i class="fas fa-tablets"></i> Data Science</router-link
+          ><i class="fas fa-chart-bar"></i> Data Science</router-link
         >
       </b-row>
       <b-row>
         <a href="/reiniel-dan/gamefront/index.html"
-          ><i class="fas fa-gamepad"></i> Game Front*</a
+          ><i class="fas fa-gamepad"></i> Game Front (x)</a
         >
       </b-row>
     </span>
@@ -65,7 +65,8 @@ export default {
   background-color: var(--header-base);
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  border: 1px solid var(--header-base);
+  border: 1px solid var(--header-border);
+  border-left: transparent;
   transition: transform 0.5s;
   overflow: hidden;
   font-size: 1rem;
@@ -77,7 +78,7 @@ a {
   text-decoration: none;
   transition: font-size 0.5s;
   padding: 10px;
-  border-bottom: 0.1px solid var(--header-color);
+  /* border-bottom: 0.1px solid var(--header-color); */
 }
 
 a:hover,

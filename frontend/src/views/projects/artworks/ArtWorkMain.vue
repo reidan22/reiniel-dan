@@ -1,6 +1,7 @@
 <template>
   <b-container fluid id="art-work" class="centrify">
     <b-col>
+      <!--------------------------------------- Header ---------------------------------------->
       <b-row id="art-work-header" class="centrify">
         <b-col @click="setMode(0)" class="art-header-col centrify"
           >Gallery</b-col
@@ -9,15 +10,30 @@
           >Slideshow</b-col
         ><b-col @click="" class="art-header-col centrify"> About</b-col>
       </b-row>
-      <b-row id="art-work-body" v-if="mode === 0">
+      <!--------------------------------------- Individual Photos ---------------------------------------->
+      <b-row>
+        <router-view v-if="currentRoute === 'BaseArtWork'"> </router-view>
+      </b-row>
+      <!--------------------------------------- Gallery ---------------------------------------->
+      <b-row
+        id="art-work-body"
+        v-if="mode === 0 && currentRoute === 'ArtWorks'"
+      >
         <b-col
           v-for="data in imagesShuffled"
           :key="data.key"
           class="base-image"
+          :id="'image_' + data.key"
         >
-          <base-art-work-image :image="data"></base-art-work-image>
+          <router-link
+            :to="'/projects/artworks/' + data.key"
+            class="art-work-router"
+          >
+            <base-art-work-image :image="data"></base-art-work-image>
+          </router-link>
         </b-col>
       </b-row>
+      <!--------------------------------------- Carousel ---------------------------------------->
       <b-row id="art-work-body" v-if="mode === 1" class="centrify">
         <b-carousel
           id="carousel-1"
@@ -58,7 +74,6 @@ import ArtList from "@/assets/artworks/artlist.json";
 export default {
   name: "ArtWorkMain",
   components: {
-    ArtWorkHeader,
     BaseArtWorkImage,
   },
   data() {
@@ -68,6 +83,7 @@ export default {
       mode: 0,
       slide: 0,
       sliding: null,
+      isPageLoaded: null,
     };
   },
   methods: {
@@ -85,10 +101,12 @@ export default {
     },
     setMode(mode) {
       this.mode = mode;
+      this.$router.push("/projects/artworks");
     },
   },
   mounted() {
     this.$store.commit("changeHeaderColor", "#171b25");
+    this.$store.commit("changeHeaderBorder", "#171b25");
     this.$store.commit("changeHeaderBase", "white");
 
     for (let i = this.images.length - 1; i > 0; i--) {
@@ -98,10 +116,18 @@ export default {
       this.images[j] = temp;
     }
     this.imagesShuffled = this.images;
+    this.isPageLoaded = true;
   },
   computed: {
     loadingGIF() {
       return require("@/assets/resources/loading-buffering.gif");
+    },
+    currentRoute() {
+      return this.$route.name;
+    },
+
+    currentImg() {
+      return this.$store.state.currentImage;
     },
   },
 };
@@ -109,6 +135,7 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800&display=swap");
+
 #art-work {
   font-family: "Spartan", sans-serif;
   font-size: 3vw;
@@ -214,6 +241,10 @@ a.carousel-control-prev:hover {
   color: var(--header-color);
   background-color: var(--header-base);
   transition: all 0.5s ease;
+}
+
+.art-work-router {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 500px) {

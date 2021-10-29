@@ -1,7 +1,7 @@
 <template>
   <b-container fluid id="main">
     <a href="#">
-      <span id="header-all">
+      <span id="header-all" v-click-outside="onClickOutsideHeader">
         <the-header-tab
           @header-tab="isHeaderTabOpen"
           :isOpen="receivedIsTabOpen"
@@ -40,6 +40,9 @@ export default {
     },
     closeHeaderTab(fromEmit) {
       this.receivedIsTabOpen = fromEmit;
+    },
+    onClickOutsideHeader() {
+      this.receivedIsTabOpen = false;
     },
   },
 };

@@ -56,7 +56,6 @@ export default {
   top: 2vh;
   left: 20vh;
   height: 5vh;
-  transition: all 0.5s ease, border-radius 1.25s ease;
   font-size: 20px;
   z-index: 500;
 }
@@ -86,6 +85,7 @@ export default {
   border-bottom-right-radius: 50px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
+  transition: all 0.5s ease, border-radius 0.5s ease;
 }
 
 .close-span {
@@ -99,5 +99,6 @@ export default {
   color: var(--header-color);
   border: solid 1px var(--header-color);
   border-left: none;
+  transition: all 0.5s ease, border-radius 2.25s ease;
 }
 </style>

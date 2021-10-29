@@ -44,7 +44,7 @@ img {
 img:hover {
   transition: all 0.5s ease;
   transform: scale(0.95);
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 #base-component {
@@ -65,6 +65,10 @@ img:hover {
   width: auto;
   height: auto;
   background: red;
+}
+
+.click-enlarge {
+  transform: scale(1.2);
 }
 @media only screen and (max-width: 500px) {
   .base-image {
@@ -92,12 +96,10 @@ img:hover {
 
   #base-component:hover {
     transition: all 0.5s ease;
-    color: var(--header-color);
+    color: var(--header-base);
   }
 
   #image-title {
-    position: relative;
-    top: 14rem;
   }
 }
 </style>

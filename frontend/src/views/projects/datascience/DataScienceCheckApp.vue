@@ -24,11 +24,13 @@ export default {
     };
   },
   mounted() {
-    this.$store.commit("changeHeaderBase", "#cccccc");
+    this.$store.commit("changeHeaderBase", "rgb(234,234,234)");
+    this.$store.commit("changeHeaderBorder", "#007985");
     this.$store.commit("changeHeaderColor", "#007985");
   },
   beforeRouteLeave(to, from, next) {
     this.$store.commit("changeHeaderBase", "black");
+    this.$store.commit("changeHeaderBorder", "black");
     this.$store.commit("changeHeaderColor", "white");
     next();
   },
