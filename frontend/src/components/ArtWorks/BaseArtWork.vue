@@ -79,7 +79,7 @@ export default {
 
 .solo-image {
   width: auto;
-  height: 83vh;
+  height: 95vh;
   border: 2px solid white;
   background-color: var(--header-base);
   margin-bottom: 23px;
@@ -116,16 +116,37 @@ export default {
   height: 95vh;
   opacity: 1;
 }
+.solo-image-row {
+  height: 100vh;
+}
 
 @media only screen and (max-width: 500px) {
   .full-image {
     width: 95vw;
-    height: auto;
+    height: 100vh;
   }
 
   .solo-image {
-    width: 83vw;
+    width: 90vw;
     height: auto;
+  }
+
+  .solo-image-row {
+    height: 50vh;
+  }
+
+  .solo-header {
+    margin-top: 20vh;
+    height: auto;
+  }
+  #solo-image-all {
+    height: 100vh;
+  }
+
+  .full-image {
+    width: 95vw;
+    height: auto;
+    opacity: 1;
   }
 }
 </style>

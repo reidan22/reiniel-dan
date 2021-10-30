@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import BaseDataScienceSlide from "@/components/BaseDataScienceSlide";
-import BaseDataScienceHeader from "@/components/BaseDataScienceHeader.vue";
+import BaseDataScienceSlide from "@/components/DataScience/BaseDataScienceSlide";
+import BaseDataScienceHeader from "@/components/DataScience/BaseDataScienceHeader";
 import Slides from "@/assets/datascience/json/checkAppList.json";
 export default {
   name: "DataScienceCheckApp",
@@ -60,6 +60,7 @@ export default {
     this.$store.commit("changeHeaderBase", "rgb(234,234,234)");
     this.$store.commit("changeHeaderBorder", "#007985");
     this.$store.commit("changeHeaderColor", "#007985");
+    this.$store.commit("setShowToTop", true);
   },
   beforeRouteLeave(to, from, next) {
     this.$store.commit("changeHeaderBase", "black");
@@ -74,7 +75,6 @@ export default {
 .is_fraud {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100vh;
 }
 
 .footer {

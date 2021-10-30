@@ -66,7 +66,6 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  overflow-y: hidden;
   height: max(auto, 100vh);
 }
 
@@ -90,7 +89,7 @@ button {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-
+/* 
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -105,7 +104,7 @@ button {
   background-color: var(--header-base);
   border: 1px solid var(--header-color);
   height: 20%;
-}
+} */
 
 .dan-logo {
   font-family: "Quicksand", sans-serif;

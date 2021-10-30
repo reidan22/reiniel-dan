@@ -17,12 +17,12 @@
           v-for="link in getDetails.links"
           :key="link"
         >
-          <button class="ds-header-button centrify">
-            <a :href="link.link" class="ds-header-link" target="_blank">
+          <a :href="link.link" class="ds-header-link centrify" target="_blank">
+            <button class="ds-header-button centrify">
               <i :class="link.faIcon"></i>
               {{ link.linkDesc }}
-            </a>
-          </button>
+            </button>
+          </a>
         </b-row>
       </b-col>
     </b-row>
@@ -52,6 +52,7 @@ export default {
   width: 100vw;
   height: 25vw;
   font-size: 1vw;
+  margin-top: 7vw;
 }
 
 .ds-header-title {
@@ -78,6 +79,7 @@ export default {
 .ds-header-link {
   color: var(--header-base);
   text-decoration: none;
+  margin: 0.2vw;
 }
 
 .ds-header-link:hover,
@@ -93,8 +95,10 @@ export default {
   text-decoration: none;
   border-radius: 5px;
   width: 15vw;
+  height: auto;
   transition: all 0.5s ease;
-  margin: 0.5vw;
+  margin: 0vw;
+  padding: 0px;
 }
 
 .ds-header-button:hover {
@@ -162,10 +166,15 @@ export default {
 
   .ds-header-button {
     font-size: 0.7rem;
-    width: 80vw;
+    width: 65vw;
     height: 10vw;
     transition: all 0.5s ease;
-    margin: 0.5vw;
+    margin: 0px;
+  }
+
+  .ds-header-button:hover {
+    transform: scale(1);
+    opacity: 1;
   }
 
   .buttons {
@@ -177,6 +186,13 @@ export default {
     width: auto;
     font-size: 1.2rem;
     margin: 0px;
+    padding: 0px;
+  }
+
+  .ds-header-link {
+    text-decoration: none;
+    width: 100vw;
+    margin: auto;
     padding: 0px;
   }
 }

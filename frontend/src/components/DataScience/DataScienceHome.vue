@@ -1,17 +1,14 @@
 <template>
-  <b-row class="is_fraud"> </b-row>
+  <b-row class="is_fraud centrify">
+    <h1>Data Science Home page</h1>
+  </b-row>
 </template>
 
 <script>
-import BaseDataScienceSlide from "@/components/BaseDataScienceSlide";
-import BaseDataScienceHeader from "@/components/BaseDataScienceHeader.vue";
 import Slides from "@/assets/datascience/json/mooeList.json";
 export default {
   name: "DataScienceHome",
-  components: {
-    BaseDataScienceHeader,
-    BaseDataScienceSlide,
-  },
+  components: {},
   data() {
     return {
       slides: Slides,
@@ -41,6 +38,7 @@ export default {
     this.$store.commit("changeHeaderBase", "black");
     this.$store.commit("changeHeaderBorder", "black");
     this.$store.commit("changeHeaderColor", "white");
+    this.$store.commit("setShowToTop", false);
   },
   beforeRouteLeave(to, from, next) {
     this.$store.commit("changeHeaderBase", "black");
@@ -56,6 +54,7 @@ export default {
   overflow-y: auto;
   overflow-x: hidden;
   height: 100vh;
+  width: 100vw;
 }
 
 .footer {

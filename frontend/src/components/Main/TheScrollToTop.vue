@@ -34,9 +34,9 @@ export default {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  background: var(--header-color);
-  color: var(--header-base);
-  border: 1px solid var(--header-base);
+  background: var(--header-base);
+  color: var(--header-color);
+  border: 1px solid var(--header-color);
   z-index: 100;
   cursor: pointer;
 }

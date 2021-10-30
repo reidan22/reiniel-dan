@@ -16,6 +16,7 @@ export default new Vuex.Store({
     showToTop: false,
     artWorkPage:0,
     showBaseArt:false,
+    dataSciencePage:"home",
 
   },
   mutations: {
@@ -49,7 +50,10 @@ export default new Vuex.Store({
     },
     setShowBaseArt(state,payload){
       state.showBaseArt = payload
-    }
+    },
+    setDataSciencePage(state,payload){
+      state.dataSciencePage = payload
+    },
   },
   actions: {
   },

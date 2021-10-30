@@ -19,7 +19,7 @@ import BaseArtWork from '@/components/ArtWorks/BaseArtWork'
 // import DataScienceHireEducation from "@/views/projects/datascience/DataScienceHireEducation.vue";
 // import DataScienceCheckApp from "@/views/projects/datascience/DataScienceCheckApp.vue";
 // import DataScienceHome from '@/views/projects/datascience/DataScienceHome.vue'
-
+import DataScience from '@/views/DataScience'
 Vue.use(VueRouter);
 
 const routes = [
@@ -56,7 +56,15 @@ const routes = [
         props:true
       }
     ]
-  },  
+
+
+  },  {
+
+
+    path: "/projects/data_science",
+    name: "DataScience",
+    component: DataScience,
+}
   
   // {
   //   path: "/projects/artworks",

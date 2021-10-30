@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import BaseDataScienceSlide from "@/components/BaseDataScienceSlide";
-import BaseDataScienceHeader from "@/components/BaseDataScienceHeader.vue";
+import BaseDataScienceSlide from "@/components/DataScience/BaseDataScienceSlide";
+import BaseDataScienceHeader from "@/components/DataScience/BaseDataScienceHeader";
 import Slides from "@/assets/datascience/json/isFraudlist.json";
 export default {
   name: "DataScienceIsFraud",
@@ -45,6 +45,7 @@ export default {
     this.$store.commit("changeHeaderColor", "#e2dac5");
     this.$store.commit("changeHeaderBorder", "#e2dac5");
     this.$store.commit("changeHeaderBase", "#ea5431");
+    this.$store.commit("setShowToTop", true);
   },
   beforeRouteLeave(to, from, next) {
     this.$store.commit("changeHeaderBase", "black");
@@ -59,7 +60,6 @@ export default {
 .is_fraud {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100vh;
 }
 
 .footer {

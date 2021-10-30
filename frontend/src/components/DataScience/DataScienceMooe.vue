@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import BaseDataScienceSlide from "@/components/BaseDataScienceSlide";
-import BaseDataScienceHeader from "@/components/BaseDataScienceHeader.vue";
+import BaseDataScienceSlide from "@/components/DataScience/BaseDataScienceSlide";
+import BaseDataScienceHeader from "@/components/DataScience/BaseDataScienceHeader";
 import Slides from "@/assets/datascience/json/mooeList.json";
 export default {
   name: "DataScienceMooe",
@@ -51,6 +51,7 @@ export default {
     this.$store.commit("changeHeaderColor", "#c9b487");
     this.$store.commit("changeHeaderBorder", "#c9b487");
     this.$store.commit("changeHeaderBase", "#2e3236");
+    this.$store.commit("setShowToTop", true);
   },
   beforeRouteLeave(to, from, next) {
     this.$store.commit("changeHeaderBase", "black");
@@ -65,7 +66,6 @@ export default {
 .is_fraud {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100vh;
 }
 
 .footer {

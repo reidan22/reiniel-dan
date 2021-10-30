@@ -82,6 +82,8 @@ export default {
     width: 120vw;
     height: 30vh;
     box-shadow: 15px 0px 15px var(--header-base);
+    margin: 0px;
+    padding: 0px;
   }
 
   .page-details {

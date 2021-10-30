@@ -1,8 +1,6 @@
 <template>
   <b-row>
-    <b-row>
-      <router-view v-if="isBaseArtShown"> </router-view>
-    </b-row>
+    <router-view v-if="isBaseArtShown"> </router-view>
     <b-row id="art-work-body" v-if="!isBaseArtShown">
       <b-col
         v-for="data in imagesShuffled"

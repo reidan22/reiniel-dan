@@ -107,7 +107,7 @@ export default {
   background-color: var(--header-color);
   color: var(--header-base);
   width: 12rem;
-  height: 4rem;
+  height: 3.5rem;
   transition: all 0.5s ease;
   z-index: 20;
 }

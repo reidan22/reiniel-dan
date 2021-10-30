@@ -16,6 +16,6 @@ export default {
 
 <style scoped>
 .artwork-about {
-  height: 90.5vh;
+  height: 100vh;
 }
 </style>

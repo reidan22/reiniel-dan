@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import BaseDataScienceSlide from "@/components/BaseDataScienceSlide";
+import BaseDataScienceSlide from "@/components/DataScience/BaseDataScienceSlide";
+import BaseDataScienceHeader from "@/components/DataScience/BaseDataScienceHeader";
 import Slides from "@/assets/datascience/json/spotifyList.json";
-import BaseDataScienceHeader from "@/components/BaseDataScienceHeader.vue";
 export default {
   name: "DataScienceSpotify",
   components: {
@@ -50,6 +50,7 @@ export default {
     this.$store.commit("changeHeaderColor", "#d98484");
     this.$store.commit("changeHeaderBorder", "#d98484");
     this.$store.commit("changeHeaderBase", "#2a315f");
+    this.$store.commit("setShowToTop", true);
   },
   beforeRouteLeave(to, from, next) {
     this.$store.commit("changeHeaderBase", "black");
@@ -64,7 +65,6 @@ export default {
 .is_fraud {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100vh;
 }
 
 .footer {

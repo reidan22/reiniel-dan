@@ -14,7 +14,6 @@ export default {
     setMode(mode) {
       this.$store.commit("setArtWorkPage", mode);
       this.$router.push("/projects/artworks/");
-      // alert(this.$store.state.artWorkPage);
     },
   },
   mounted() {},
@@ -27,7 +26,6 @@ export default {
   width: 50vw;
   border-bottom: 2px solid var(--header-base);
   font-size: 1vw;
-  margin: 20px 0 0 0;
 }
 
 .art-header-col {
@@ -50,7 +48,7 @@ export default {
     margin: 0px 0px;
     margin-left: auto;
     position: relative;
-    left: 20px;
+    left: 0px;
     border-bottom: none;
     font-size: 3vw;
     font-weight: 400;

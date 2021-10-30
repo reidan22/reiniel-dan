@@ -2,7 +2,7 @@
   <b-row class="artworks centrify">
     <art-work-front v-if="isLoaded === false"></art-work-front>
     <art-work-header v-if="isLoaded === true"></art-work-header>
-    <art-work-about v-if="artPage === 0"></art-work-about>
+    <art-work-about v-if="artPage === 0 && isLoaded === true"></art-work-about>
     <art-work-gallery v-if="artPage === 1"></art-work-gallery>
     <art-work-slide v-if="artPage === 2"></art-work-slide>
   </b-row>
