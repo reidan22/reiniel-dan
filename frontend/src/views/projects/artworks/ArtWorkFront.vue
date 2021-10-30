@@ -10,7 +10,7 @@
         >&nbsp;
       </button>
     </b-col>
-    <b-row id="art-work-front" class="centrify" v-if="!isLoaded">
+    <b-row id="art-work-front" class="centrify" v-if="!isLoaded && randomImage">
       <img
         id="art-work-front-image"
         :src="getImage(randomImage.image)"

@@ -1,5 +1,6 @@
 <template>
   <b-row class="is_fraud">
+    <base-data-science-header :details="details"></base-data-science-header>
     <base-data-science-slide
       :slide="slide"
       v-for="slide in slides"
@@ -13,14 +14,36 @@
 <script>
 import BaseDataScienceSlide from "@/components/BaseDataScienceSlide";
 import Slides from "@/assets/datascience/json/spotifyList.json";
+import BaseDataScienceHeader from "@/components/BaseDataScienceHeader.vue";
 export default {
   name: "DataScienceSpotify",
   components: {
     BaseDataScienceSlide,
+    BaseDataScienceHeader,
   },
   data() {
     return {
       slides: Slides,
+      details: {
+        title: "Titanium Beats",
+        titleIcon: "fab fa-spotify",
+        subtitle: "Cohort 7 - Sprint 2 Spotify dataset",
+        desc: "Exploratory Data Analysis of David Guetta and EDM using Spotify PH Dataset",
+        subDesc:
+          "Right Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facere porro optio? Minus impedit ratione totam, odio cumque, commodi,",
+        links: [
+          {
+            link: "https://docs.google.com/presentation/d/1fDjaEXZVDpma3M25MphIGaRCMiRtA1mn/edit#slide=id.p1",
+            faIcon: "far fa-file-powerpoint",
+            linkDesc: "Powerpoint Presentation",
+          },
+          {
+            link: "https://sprint2-david-guetta-ph-strat.herokuapp.com/",
+            faIcon: "fas fa-desktop",
+            linkDesc: "Heroku App",
+          },
+        ],
+      },
     };
   },
   mounted() {

@@ -93,4 +93,10 @@ a:active {
   transition: transform 0.5s;
   transform: translateX(-20vh);
 }
+
+@media only screen and (max-width: 500px) {
+  #nav {
+    font-size: 0.8rem;
+  }
+}
 </style>

@@ -15,6 +15,7 @@ import DataScienceSpotify from "@/views/projects/datascience/DataScienceSpotify.
 import DataScienceMooe from "@/views/projects/datascience/DataScienceMooe.vue";
 import DataScienceHireEducation from "@/views/projects/datascience/DataScienceHireEducation.vue";
 import DataScienceCheckApp from "@/views/projects/datascience/DataScienceCheckApp.vue";
+import DataScienceHome from '@/views/projects/datascience/DataScienceHome.vue'
 
 Vue.use(VueRouter);
 
@@ -86,18 +87,16 @@ const routes = [
     name: "DataScienceMooe",
     component: DataScienceMooe,
 
+      },    {
+    path: "",
+    name: "DataScienceHome",
+    component: DataScienceHome,
+
       },
     ]
   }, 
 ];
 
-const scrollBehavior = (to, from, savedPosition) => {
-  if (savedPosition) {
-    return savedPosition;
-  } else {
-    return { x: 0, y: 0 }
-  }
-};
 
 
 const router = new VueRouter({

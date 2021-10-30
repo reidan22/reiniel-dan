@@ -3,12 +3,15 @@
     <b-col>
       <!--------------------------------------- Header ---------------------------------------->
       <b-row id="art-work-header" class="centrify">
+        <b-col @click="setMode(0)" class="art-header-col centrify">
+          About</b-col
+        >
         <b-col @click="setMode(0)" class="art-header-col centrify"
           >Gallery</b-col
         >
         <b-col @click="setMode(1)" class="art-header-col centrify"
           >Slideshow</b-col
-        ><b-col @click="" class="art-header-col centrify"> About</b-col>
+        >
       </b-row>
       <!--------------------------------------- Individual Photos ---------------------------------------->
       <b-row>
@@ -23,7 +26,7 @@
           v-for="data in imagesShuffled"
           :key="data.key"
           class="base-image"
-          :id="'image_' + data.key"
+          :ref="'image_' + data.key"
         >
           <router-link
             :to="'/projects/artworks/' + data.key"
@@ -38,7 +41,7 @@
         <b-carousel
           id="carousel-1"
           v-model="slide"
-          :interval="4000"
+          :interval="2500"
           controls
           indicators
           background="transparent"
@@ -102,7 +105,19 @@ export default {
     setMode(mode) {
       this.mode = mode;
       this.$router.push("/projects/artworks");
+
+      // let cur = this.$store.state.currentImage;
+      // if (cur) {
+      //   this.scrollTo(cur);
+      // }
     },
+
+    // scrollTo(refName) {
+    //   this.$nextTick(() => {
+    //     let pos = this.$refs[refName][0]["offsetTop"];
+    //     this.$refs[refName][0].scrollTo({ top: pos, behavior: "smooth" });
+    //   });
+    // },
   },
   mounted() {
     this.$store.commit("changeHeaderColor", "#171b25");

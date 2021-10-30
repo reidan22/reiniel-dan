@@ -1,5 +1,6 @@
 <template>
   <b-row class="is_fraud">
+    <base-data-science-header :details="details"></base-data-science-header>
     <base-data-science-slide
       :slide="slide"
       v-for="slide in slides"
@@ -12,15 +13,32 @@
 
 <script>
 import BaseDataScienceSlide from "@/components/BaseDataScienceSlide";
+import BaseDataScienceHeader from "@/components/BaseDataScienceHeader.vue";
 import Slides from "@/assets/datascience/json/isFraudlist.json";
 export default {
   name: "DataScienceIsFraud",
   components: {
+    BaseDataScienceHeader,
     BaseDataScienceSlide,
   },
   data() {
     return {
       slides: Slides,
+      details: {
+        title: "CODEL IS_FRAUD?",
+        titleIcon: "far fa-credit-card",
+        subtitle: "Cohort 7 - Sprint 3 Big Data ",
+        desc: "EDA of Credit Card Information Dataset And Predicting Fraudulent TransactionsUsing Different Machine Learning Models",
+        subDesc:
+          "Right Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facere porro optio? Minus impedit ratione totam, odio cumque, commodi,",
+        links: [
+          {
+            link: "https://docs.google.com/presentation/d/1h56Llfx8gFcTTPIj601rNMG3sJXebzck/edit#slide=id.p1",
+            faIcon: "far fa-file-powerpoint",
+            linkDesc: "Powerpoint Presentation",
+          },
+        ],
+      },
     };
   },
   mounted() {

@@ -108,4 +108,11 @@ button {
   border: 1px solid var(--header-color);
   height: 20%;
 }
+
+.dan-logo {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: aqua;
+}
 </style>

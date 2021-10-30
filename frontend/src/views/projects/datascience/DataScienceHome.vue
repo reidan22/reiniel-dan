@@ -1,22 +1,13 @@
 <template>
-  <b-row class="is_fraud">
-    <base-data-science-header :details="details"></base-data-science-header>
-    <base-data-science-slide
-      :slide="slide"
-      v-for="slide in slides"
-      :key="slide.key"
-      folder="hire_education/"
-    ></base-data-science-slide>
-    <b-row class="footer"></b-row>
-  </b-row>
+  <b-row class="is_fraud"> </b-row>
 </template>
 
 <script>
 import BaseDataScienceSlide from "@/components/BaseDataScienceSlide";
 import BaseDataScienceHeader from "@/components/BaseDataScienceHeader.vue";
-import Slides from "@/assets/datascience/json/hireEducationList.json";
+import Slides from "@/assets/datascience/json/mooeList.json";
 export default {
-  name: "DataScienceHireEducation",
+  name: "DataScienceHome",
   components: {
     BaseDataScienceHeader,
     BaseDataScienceSlide,
@@ -25,20 +16,20 @@ export default {
     return {
       slides: Slides,
       details: {
-        title: "Hire Education",
-        titleIcon: "fas fa-user-graduate",
-        subtitle: "Cohort 7 - Sprint 4 Scraping & NLP",
-        desc: "Online course recommender for 'Data Science' using web scraping and NLP",
+        title: "MOOE : The Great and the Powerful",
+        titleIcon: "fas fa-book",
+        subtitle: "Cohort 7 - Sprint 1 DepEd dataset",
+        desc: "An exploratory analysis of the nature and effect of MOOE in PH public schools",
         subDesc:
           "Right Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facere porro optio? Minus impedit ratione totam, odio cumque, commodi,",
         links: [
           {
-            link: "https://docs.google.com/presentation/d/1pyTkMu7-pH7-fmbHDhf6MO9CUtgb9-Etrx6FDcevAGQ",
+            link: "https://docs.google.com/presentation/d/1YxbnCW98FW-RGrfqWfGglaxiAIkENGZI/",
             faIcon: "far fa-file-powerpoint",
             linkDesc: "Powerpoint Presentation",
           },
           {
-            link: "https://share.streamlit.io/heide-b/sprint4_dsc7_team2/main/Hire_Education.py",
+            link: "https://group-2-app.herokuapp.com/",
             faIcon: "fas fa-desktop",
             linkDesc: "Heroku App",
           },
@@ -47,9 +38,9 @@ export default {
     };
   },
   mounted() {
-    this.$store.commit("changeHeaderBase", "#3d2f30");
-    this.$store.commit("changeHeaderBorder", "#e2c0b5");
-    this.$store.commit("changeHeaderColor", "#e2c0b5");
+    this.$store.commit("changeHeaderBase", "black");
+    this.$store.commit("changeHeaderBorder", "black");
+    this.$store.commit("changeHeaderColor", "white");
   },
   beforeRouteLeave(to, from, next) {
     this.$store.commit("changeHeaderBase", "black");

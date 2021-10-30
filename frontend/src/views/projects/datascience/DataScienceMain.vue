@@ -2,6 +2,11 @@
   <b-container fluid id="data_science">
     <b-row id="ds_nav" class="centrify">
       <b-col class="nav-items centrify">
+        <router-link to="/projects/data_science"
+          ><i class="fas fa-home"></i
+        ></router-link>
+      </b-col>
+      <b-col class="nav-items centrify">
         <router-link to="/projects/data_science/mooe"
           ><i class="fas fa-book"></i
         ></router-link>
@@ -27,9 +32,9 @@
         ></router-link>
       </b-col>
     </b-row>
-    <!-- <transition name="fade"> -->
-    <router-view id="ds_body" class="centrify" />
-    <!-- </transition> -->
+    <transition name="fade">
+      <router-view id="ds_body" class="centrify" />
+    </transition>
   </b-container>
 </template>
 
@@ -49,7 +54,7 @@ export default {
 #data_science {
   background-color: var(--header-color);
   color: var(--header-base);
-  height: 100vh;
+  height: auto;
 }
 #ds_nav {
   height: 6vw;
@@ -84,13 +89,14 @@ export default {
 @media only screen and (max-width: 500px) {
   #ds_nav {
     height: 8vh;
-    width: 90vw;
+    width: 80vw;
     margin: 0px;
-    margin-left: 10vw;
-    /* margin-bottom: 20vh; */
-    font-size: 3vw;
-    background-color: var(--header-color);
-    /* background: red; */
+    margin-left: 18vw;
+    font-size: 3.5vw;
+  }
+
+  .nav-items a {
+    margin: 0px;
   }
 }
 </style>

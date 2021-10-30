@@ -101,4 +101,10 @@ export default {
   border-left: none;
   transition: all 0.5s ease, border-radius 2.25s ease;
 }
+
+@media only screen and (max-width: 500px) {
+  .close-span {
+    width: 5vh;
+  }
+}
 </style>

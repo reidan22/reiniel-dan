@@ -1,7 +1,11 @@
 <template>
   <b-row
     id="base-slide"
-    :class="{ centrify: true, 'w-bg': slide.key % 2, 'wo-bg': !slide.key % 2 }"
+    :class="{
+      centrify: true,
+      'w0-bg': slide.key % 2 === 1,
+      'w-bg': slide.key % 2 === 0,
+    }"
   >
     <b-col
       ><span class="page-number" v-if="slide.key % 2">{{ slide.key }}</span>
@@ -55,8 +59,8 @@ export default {
 }
 
 .wo-bg {
-  color: var(--header-base);
   background-color: transparent;
+  color: var(--header-base);
 }
 
 .slideImg {
@@ -87,7 +91,7 @@ export default {
     padding: 0px;
   }
   .page-number {
-    font-size: 1.75rem;
+    font-size: 1rem;
   }
 
   img {

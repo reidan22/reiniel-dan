@@ -1,6 +1,7 @@
 <template>
   <b-container fluid id="main">
     <a href="#">
+      <the-scroll-to-top></the-scroll-to-top>
       <span id="header-all" v-click-outside="onClickOutsideHeader">
         <the-header-tab
           @header-tab="isHeaderTabOpen"
@@ -10,6 +11,7 @@
           @header="closeHeaderTab"
           :isOpen="receivedIsTabOpen"
         ></the-header>
+        <!-- <the-footer></the-footer> -->
       </span>
     </a>
     <transition name="fade">
@@ -22,12 +24,16 @@
 import TheHeaderTab from "@/components/TheHeaderTab.vue";
 import TheHeader from "@/views/TheHeader.vue";
 import TheBody from "@/views/TheBody.vue";
+import TheFooter from "@/views/TheFooter.vue";
+import TheScrollToTop from "@/components/TheScrollToTop.vue";
 export default {
   name: "TheMain",
   components: {
     TheHeader,
     TheBody,
     TheHeaderTab,
+    // TheFooter,
+    TheScrollToTop,
   },
   data() {
     return {

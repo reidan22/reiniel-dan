@@ -12,7 +12,7 @@ export default new Vuex.Store({
     appTimeSeconds: 0,
     artworksLink:"@/assets/artworks/",
     isArtWorkLoaded: false,
-    currentImage: 11,
+    currentImage: null,
   },
   mutations: {
 
