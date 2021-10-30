@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 #nav {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 2vh;
   /* height: 50vh; */

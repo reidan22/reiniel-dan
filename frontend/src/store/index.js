@@ -6,13 +6,17 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     headerColor : "",
-    headerBase:"",
+    headerBase:"red",
     headerBorder:"",
     isDrumKitDisplayed: false,
     appTimeSeconds: 0,
     artworksLink:"@/assets/artworks/",
     isArtWorkLoaded: false,
     currentImage: null,
+    showToTop: false,
+    artWorkPage:0,
+    showBaseArt:false,
+
   },
   mutations: {
 
@@ -37,6 +41,15 @@ export default new Vuex.Store({
     changeCurrentImage(state, payload){
       state.currentImage = "image_" + payload;
     },
+    setShowToTop(state,payload){
+      state.showToTop = payload
+    },
+    setArtWorkPage(state,payload){
+      state.artWorkPage = payload
+    },
+    setShowBaseArt(state,payload){
+      state.showBaseArt = payload
+    }
   },
   actions: {
   },

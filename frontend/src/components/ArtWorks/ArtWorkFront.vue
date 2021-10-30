@@ -17,17 +17,17 @@
         alt=""
       />
     </b-row>
-    <art-work-main v-else-if="isLoaded"></art-work-main>
+    <!-- <art-work-main v-else-if="isLoaded"></art-work-main> -->
   </b-container>
 </template>
 
 <script>
-import ArtWorkMain from "@/views/projects/artworks/ArtWorkMain";
+// import ArtWorkMain from "@/views/projects/artworks/ArtWorkMain";
 import ArtList from "@/assets/artworks/artlist.json";
 export default {
   name: "ArtWorkFront",
   components: {
-    ArtWorkMain,
+    // ArtWorkMain,
   },
   data() {
     return {
@@ -46,6 +46,7 @@ export default {
   mounted() {
     this.$store.commit("changeHeaderColor", "#171b25");
     this.$store.commit("changeHeaderBorder", "#171b25");
+    this.$store.commit("setShowToTop", false);
     this.$store.commit("changeHeaderBase", "white");
 
     for (let i = this.images.length - 1; i > 0; i--) {
@@ -69,6 +70,7 @@ export default {
   font-size: 1.5vw;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   margin: 0px;
   padding: 0px;
 }

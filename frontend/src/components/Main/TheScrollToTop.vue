@@ -1,5 +1,5 @@
 <template>
-  <div id="to-top" @click="onClickToTop()">
+  <div id="to-top" @click="onClickToTop()" v-if="toShow">
     <div id="to-top-component">
       <i class="fas fa-angle-up scroll-icon"></i>
     </div>
@@ -12,10 +12,12 @@ export default {
   components: {},
   methods: {
     onClickToTop() {
-      // alert("OK");
-      // this.$el.scrollTo(0, 0);
-      // scrollBy(0, -101000);
       window.scrollTo(0, 0);
+    },
+  },
+  computed: {
+    toShow() {
+      return this.$store.state.showToTop;
     },
   },
 };
@@ -23,7 +25,7 @@ export default {
 
 <style scoped>
 #to-top {
-  position: absolute;
+  position: fixed;
   bottom: 1vw;
   right: 1vw;
   padding: 0px;
@@ -36,5 +38,6 @@ export default {
   color: var(--header-base);
   border: 1px solid var(--header-base);
   z-index: 100;
+  cursor: pointer;
 }
 </style>

@@ -1,18 +1,6 @@
 <template>
   <b-container fluid id="art-work" class="centrify">
     <b-col>
-      <!--------------------------------------- Header ---------------------------------------->
-      <b-row id="art-work-header" class="centrify">
-        <b-col @click="setMode(0)" class="art-header-col centrify">
-          About</b-col
-        >
-        <b-col @click="setMode(0)" class="art-header-col centrify"
-          >Gallery</b-col
-        >
-        <b-col @click="setMode(1)" class="art-header-col centrify"
-          >Slideshow</b-col
-        >
-      </b-row>
       <!--------------------------------------- Individual Photos ---------------------------------------->
       <b-row>
         <router-view v-if="currentRoute === 'BaseArtWork'"> </router-view>
@@ -72,7 +60,7 @@
 
 <script>
 import ArtWorkHeader from "./ArtWorkHeader.vue";
-import BaseArtWorkImage from "@/components/BaseArtWorkImage.vue";
+import BaseArtWorkImage from "@/components/ArtWorks/BaseArtWorkImage";
 import ArtList from "@/assets/artworks/artlist.json";
 export default {
   name: "ArtWorkMain",
@@ -120,9 +108,9 @@ export default {
     // },
   },
   mounted() {
-    this.$store.commit("changeHeaderColor", "#171b25");
-    this.$store.commit("changeHeaderBorder", "#171b25");
-    this.$store.commit("changeHeaderBase", "white");
+    // this.$store.commit("changeHeaderColor", "#171b25");
+    // this.$store.commit("changeHeaderBorder", "#171b25");
+    // this.$store.commit("changeHeaderBase", "white");
 
     for (let i = this.images.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * i);
@@ -149,22 +137,7 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800&display=swap");
-
 #art-work {
-  font-family: "Spartan", sans-serif;
-  font-size: 3vw;
-  background: var(--header-color);
-  width: 100vw;
-  height: 100vh;
-  color: var(--header-base);
-}
-
-#art-work-header {
-  height: auto;
-  margin: 0vw 25vw;
-  border-bottom: 2px solid var(--header-base);
-  font-size: 1vw;
 }
 
 #art-work-body {
@@ -244,36 +217,11 @@ a.carousel-control-prev:hover {
   font-size: 1rem;
 }
 
-.art-header-col {
-  cursor: pointer;
-  transition: all 0.5s ease;
-  border-top: 1px solid var(--header-base);
-  height: 3vw;
-}
-
-.art-header-col:hover {
-  cursor: pointer;
-  color: var(--header-color);
-  background-color: var(--header-base);
-  transition: all 0.5s ease;
-}
-
 .art-work-router {
   text-decoration: none;
 }
 
 @media only screen and (max-width: 500px) {
-  #art-work-header {
-    width: 80vw;
-    margin: 0px 0px;
-    margin-left: auto;
-    position: relative;
-    left: 20px;
-    border-bottom: none;
-    font-size: 3vw;
-    font-weight: 400;
-  }
-
   .base-image,
   .base-image-carousel {
     height: auto;
@@ -286,14 +234,6 @@ a.carousel-control-prev:hover {
     text-shadow: 1px 1px 2px #333;
     height: 90vh;
     width: 100vw;
-    transition: all 0.5s ease;
-  }
-
-  .art-header-col {
-    border-top: none;
-    height: 10vw;
-  }
-  .art-header-col:hover {
     transition: all 0.5s ease;
   }
 }

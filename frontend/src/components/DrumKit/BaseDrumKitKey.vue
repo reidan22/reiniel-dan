@@ -66,7 +66,7 @@ button.clicked {
     background: none;
     outline: none;
     border: none;
-    cursor: none;
+    cursor: pointer;
     height: 23vh;
     width: 11vh;
     border-radius: 7px;

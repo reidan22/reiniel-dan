@@ -46,22 +46,6 @@ export default {
       this.mode = !this.mode;
     },
   },
-  mounted() {
-    this.$store.commit("changeHeaderColor", "#F1E3BC");
-    this.$store.commit("changeHeaderBorder", "#b3890d");
-    this.$store.commit("changeHeaderBase", "#b3890d");
-    this.$store.commit("toggleDrumKitDisplayed", true);
-  },
-  beforeRouteLeave(to, from, next) {
-    this.$store.commit("toggleDrumKitDisplayed", false);
-    next();
-  },
-  created() {
-    setInterval(() => {
-      let secondsNow = new Date().getTime() / 1000;
-      this.$store.commit("countUpAppTimeSeconds", secondsNow);
-    }, 1000);
-  },
 };
 </script>
 

@@ -56,6 +56,12 @@ export default {
   },
   mounted() {
     this.$store.commit("changeCurrentImage", this.image.key);
+    this.$store.commit("setShowBaseArt", true);
+  },
+  beforeRouteLeave(to, from, next) {
+    this.$store.commit("setShowBaseArt", false);
+
+    next();
   },
 };
 </script>
@@ -63,7 +69,7 @@ export default {
 <style scoped>
 #solo-image-all {
   width: 100vw;
-  height: 90vh;
+  overflow: hidden;
 }
 
 .solo-header {
@@ -76,6 +82,7 @@ export default {
   height: 83vh;
   border: 2px solid white;
   background-color: var(--header-base);
+  margin-bottom: 23px;
 }
 
 .solo-link {

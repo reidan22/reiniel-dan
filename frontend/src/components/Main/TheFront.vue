@@ -57,6 +57,8 @@ export default {
     setInterval(() => {
       this.showFront = !this.showFront;
     }, 750);
+
+    this.$router.push("/home");
   },
 };
 </script>
@@ -68,7 +70,6 @@ export default {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 100vw;
   height: 100vh;
   font-family: "Roboto", sans-serif;
   font-size: 15vw;

@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import TheMain from "@/views/TheMain.vue";
-import TheFront from "@/views/TheFront.vue";
+import TheFront from "@/components/Main/TheFront";
+import TheMain from "@/components/Main/TheMain";
 
 export default {
   name: "App",
@@ -26,6 +26,7 @@ export default {
   mounted() {
     this.$store.commit("changeHeaderColor", "#66fcf1");
     this.$store.commit("changeHeaderBase", "#0b0c10a2");
+    this.$store.commit("changeHeaderBorder", "#66fcf1");
   },
   computed: {
     headerBase() {
@@ -37,7 +38,6 @@ export default {
     headerBorder() {
       return this.$store.state.headerBorder;
     },
-    created() {},
   },
 };
 </script>
@@ -61,13 +61,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  width: 100vw;
-  height: 100vh;
   color: #66fcf1;
-  background-color: #1f2833;
+  background-color: var(--header-base);
   margin: 0px;
   padding: 0px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: max(auto, 100vh);
 }
 
 button {
@@ -81,14 +81,12 @@ button {
   align-items: center;
   justify-content: center;
 }
-.m0 {
-  margin: 0px;
-}
 
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
 }
+
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }

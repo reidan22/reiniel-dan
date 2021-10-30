@@ -52,7 +52,7 @@ export default {
 
 <style scoped>
 #header-tab {
-  position: absolute;
+  position: fixed;
   top: 2vh;
   left: 20vh;
   height: 5vh;
