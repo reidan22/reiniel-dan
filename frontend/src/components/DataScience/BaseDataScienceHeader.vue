@@ -19,7 +19,7 @@
         >
           <a :href="link.link" class="ds-header-link centrify" target="_blank">
             <button class="ds-header-button centrify">
-              <i :class="link.faIcon"></i>
+              <i :class="link.faIcon"></i>&nbsp;
               {{ link.linkDesc }}
             </button>
           </a>
