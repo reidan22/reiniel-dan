@@ -3,25 +3,25 @@
     {{ fromPropsIsOpen(isOpen) }}
     <span @click="onClickLink()">
       <b-row>
-        <router-link to="/home"
-          ><i class="fas fa-home"></i> Home</router-link
-        > </b-row
-      ><b-row>
-        <router-link to="/about"
-          ><i class="fas fa-user"></i> About</router-link
-        > </b-row
-      ><b-row>
+        <router-link to="/home"><i class="fas fa-home"></i> Home</router-link>
+        <router-link to="/about"><i class="fas fa-user"></i> About</router-link>
+      </b-row>
+
+      <b-row>
         <router-link to="/projects/drumkit"
           ><i class="fas fa-drum"></i> Drum Kit</router-link
-        > </b-row
-      ><b-row>
+        >
         <router-link to="/projects/artworks"
           ><i class="fas fa-paint-brush" /> Artworks</router-link
         >
         <router-link to="/projects/data_science"
           ><i class="fas fa-chart-bar"></i> Data Science</router-link
         >
+        <router-link to="/projects/pokemon"
+          ><i class="fas fa-dragon"></i> Pokemon</router-link
+        >
       </b-row>
+
       <b-row>
         <a href="/reiniel-dan/gamefront/index.html"
           ><i class="fas fa-gamepad"></i> Game Front (x)</a
