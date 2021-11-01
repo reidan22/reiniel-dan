@@ -69,7 +69,7 @@ export default {
   border-left: transparent;
   transition: transform 0.5s;
   overflow: hidden;
-  font-size: 1rem;
+  font-size: 0.85rem;
   z-index: 500;
 }
 

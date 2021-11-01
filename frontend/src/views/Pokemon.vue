@@ -1,22 +1,22 @@
 <template>
   <b-row class="pokemon centrify">
-    <b-row
-      class="centrify pkmn-row"
-      v-for="pokemon in pokemons"
-      :key="pokemon.name"
-    >
-      <base-sprite-image :pokemon="pokemon"></base-sprite-image>
-    </b-row>
+    <pokemon-header />
+    <pokemon-search-bar />
+    <pokemon-body />
   </b-row>
 </template>
 
 <script>
 // @ is an alias to /src
-import BaseSpriteImage from "@/components/Pokemon/BaseSpriteImage";
+import PokemonHeader from "@/components/Pokemon/PokemonHeader";
+import PokemonSearchBar from "@/components/Pokemon/PokemonSearchBar";
+import PokemonBody from "@/components/Pokemon/PokemonBody";
 export default {
   name: "Pokemon",
   components: {
-    BaseSpriteImage,
+    PokemonHeader,
+    PokemonBody,
+    PokemonSearchBar,
   },
   data() {
     return {
@@ -39,17 +39,13 @@ export default {
 };
 </script>
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+
 .pokemon {
   height: auto;
   background-color: var(--header-color);
   color: var(--header-base);
-  padding: 10vw 1vw 5vw 1vw;
-}
-
-.pkmn-row {
-  width: auto;
-  height: auto;
-  padding: 0px;
-  margin: 0px;
+  padding: 0vw 1vw 5vw 1vw;
+  font-family: "Orbitron", sans-serif;
 }
 </style>

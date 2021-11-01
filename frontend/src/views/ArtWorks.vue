@@ -5,6 +5,7 @@
     <art-work-about v-if="artPage === 0 && isLoaded === true"></art-work-about>
     <art-work-gallery v-if="artPage === 1"></art-work-gallery>
     <art-work-slide v-if="artPage === 2"></art-work-slide>
+    <the-footer></the-footer>
   </b-row>
 </template>
 

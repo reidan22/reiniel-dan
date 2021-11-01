@@ -138,6 +138,7 @@ export default {
 @media only screen and (max-width: 500px) {
   #art-work-all {
     font-size: 7vw;
+    margin-left: auto;
   }
   #art-work-front {
     overflow: hidden;

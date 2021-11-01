@@ -10,7 +10,6 @@
         @header="closeHeaderTab"
         :isOpen="receivedIsTabOpen"
       ></the-header>
-      <!-- <the-footer></the-footer> -->
     </span>
     <transition name="fade">
       <the-body></the-body>
@@ -34,6 +33,7 @@ export default {
     TheBody,
     TheHeaderTab,
     TheScrollToTop,
+    // TheFooter,
   },
   data() {
     return {

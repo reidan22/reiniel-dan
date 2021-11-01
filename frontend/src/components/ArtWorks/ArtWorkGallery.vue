@@ -94,7 +94,8 @@ export default {
     height: auto;
     width: 45vh;
     border-radius: 0px;
-    margin: 0px 5px;
+    /* margin: 0px 1vw; */
+    margin-left: 5vw;
     transition: all 0.5s ease;
   }
 }

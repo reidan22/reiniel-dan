@@ -133,16 +133,16 @@ export default {
     padding: 0px;
   }
   .data-science-header {
-    height: 50vh;
+    height: auto;
     font-size: 1vw;
     margin: 0px;
     padding: 0px;
   }
 
   .ds-header-title {
-    height: auto;
+    /* background: red; */
     font-size: 1.2rem;
-    margin-top: auto;
+    margin-top: 10vh;
   }
   .ds-header-subtitle {
     height: 5vh;

@@ -99,6 +99,8 @@ export default {
           this.types = data.types;
           this.type1 = this.types[0]["type"]["name"];
           this.type2 = this.types[1]["type"]["name"];
+          this.$store.commit("setPkmnType1", this.type1);
+          this.$store.commit("setPkmnType2", this.type2);
         });
       return this.spriteImg;
     },
@@ -148,6 +150,8 @@ export default {
       name = name.replace("-koko", " Koko");
       name = name.replace("-bulu", " Bulu");
       name = name.replace("-lele", " Lele");
+      name = name.replace("-mime", ". Mime");
+      name = name.replace("-rime", ". Rime");
       name = name.replace("-male", " (Male)");
       name = name.replace("-female", " (Female)");
       name = name.replace("-normal", " (Normal)");
@@ -231,6 +235,8 @@ export default {
       name = name.replace("-galar", " (Galarian form)");
       name = name.replace("-f", " (Female)");
       name = name.replace("-m", " (Male)");
+      this.$store.commit("setPkmnFormatName", name);
+
       return name;
     },
   },
@@ -238,7 +244,7 @@ export default {
 </script>
 <style scoped>
 .pkmn-img {
-  width: 8vw;
+  width: 7vw;
   height: 7vw;
   padding: 0px;
   margin: 0px;
@@ -270,7 +276,7 @@ export default {
     height: 12vh;
   }
   .pkmn-single-row {
-    width: 15vh;
+    width: 20vh;
     height: 18vh;
     padding: 0px;
     border: 5px solid red;

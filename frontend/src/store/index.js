@@ -17,6 +17,12 @@ export default new Vuex.Store({
     artWorkPage:0,
     showBaseArt:false,
     dataSciencePage:"home",
+    pokemonList:null,
+    filteredPokemonList:null,
+    pkmnType1:"",
+    pkmnType2:"",
+    pkmnFormatName:"",
+    pkmnSprite:"",
 
   },
   mutations: {
@@ -53,6 +59,24 @@ export default new Vuex.Store({
     },
     setDataSciencePage(state,payload){
       state.dataSciencePage = payload
+    },
+    setPokemonList(state,payload){
+      state.pokemonList = payload
+    },
+    setFilteredPokemonList(state,payload){
+      state.filteredPokemonList = payload
+    },  
+    setPkmnType1(state,payload){
+      state.pkmnType1 = payload
+    },  
+    setPkmnType2(state,payload){
+      state.pkmnType1 = payload
+    },
+    setPkmnFormatName(state,payload){
+      state.pkmnFormatName = payload
+    },
+    setPkmnSprite(state,payload){
+      state.pkmnSprite = payload
     },
   },
   actions: {

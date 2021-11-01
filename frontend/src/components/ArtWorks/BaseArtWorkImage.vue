@@ -99,7 +99,7 @@ img:hover {
     color: var(--header-base);
   }
 
-  #image-title {
-  }
+  /* #image-title {
+  } */
 }
 </style>
