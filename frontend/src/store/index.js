@@ -17,12 +17,13 @@ export default new Vuex.Store({
     artWorkPage:0,
     showBaseArt:false,
     dataSciencePage:"home",
-    pokemonList:null,
+    pokemonList:[],
     filteredPokemonList:null,
     pkmnType1:"",
     pkmnType2:"",
     pkmnFormatName:"",
     pkmnSprite:"",
+    pkmnPageIsLoaded:false
 
   },
   mutations: {
@@ -78,6 +79,13 @@ export default new Vuex.Store({
     setPkmnSprite(state,payload){
       state.pkmnSprite = payload
     },
+
+    pushToPokemonList(state,payload){
+      state.pokemonList.push(payload)
+    },    
+    artWorkIsLoaded(state){
+      state.pkmnPageIsLoaded = true;
+    }
   },
   actions: {
   },

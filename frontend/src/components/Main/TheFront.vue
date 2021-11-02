@@ -130,11 +130,11 @@ export default {
 }
 
 .slide-fade-leave-active {
-  transition: all 1s;
+  transition: all 0.75s;
 }
 .slide-fade-enter,
 .slide-fade-leave-to {
-  transform: translateY(-100vh);
+  /* transform: translateY(-100vh); */
   opacity: 0;
 }
 
