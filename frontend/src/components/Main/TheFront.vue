@@ -103,12 +103,18 @@ export default {
 * {
   z-index: 10;
 }
+
+@font-face {
+  font-family: "Arial Hollow";
+  src: url("../../assets/font/Arialic Hollow.ttf");
+}
 .front-page {
   position: absolute;
   top: 0px;
   left: 0px;
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  /* font-family: "Arial Hollow", sans-serif; */
   font-size: 15vw;
   background-color: #0b0c1000;
   /* mask-image: linear-gradient(
@@ -117,7 +123,8 @@ export default {
     transparent 100%
   ); */
   z-index: 501;
-  color: #66fcf1;
+  color: #66fcf2;
+  /* text-shadow: 0px 0px 2px red; */
   overflow: hidden;
 }
 .front-bg-image {
@@ -135,6 +142,7 @@ export default {
 .slide-fade-enter,
 .slide-fade-leave-to {
   /* transform: translateY(-100vh); */
+  /* transform: scale(0.8); */
   opacity: 0;
 }
 

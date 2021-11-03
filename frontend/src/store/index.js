@@ -83,7 +83,7 @@ export default new Vuex.Store({
     pushToPokemonList(state,payload){
       state.pokemonList.push(payload)
     },    
-    artWorkIsLoaded(state){
+    setPkmnPageIsLoaded(state){
       state.pkmnPageIsLoaded = true;
     }
   },

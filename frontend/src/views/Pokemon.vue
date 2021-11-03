@@ -2,6 +2,7 @@
   <b-row class="pokemon centrify">
     <pokemon-header />
     <pokemon-search-bar />
+    <pokemon-logo></pokemon-logo>
     <pokemon-body />
   </b-row>
 </template>
@@ -11,12 +12,14 @@
 import PokemonHeader from "@/components/Pokemon/PokemonHeader";
 import PokemonSearchBar from "@/components/Pokemon/PokemonSearchBar";
 import PokemonBody from "@/components/Pokemon/PokemonBody";
+import PokemonLogo from "@/components/Pokemon/PokemonLogo";
 export default {
   name: "Pokemon",
   components: {
     PokemonHeader,
     PokemonBody,
     PokemonSearchBar,
+    PokemonLogo,
   },
   data() {
     return {
@@ -39,13 +42,19 @@ export default {
 };
 </script>
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"); */
 
+@font-face {
+  font-family: "Pixelate";
+  src: url("../assets/font/SF Pixelate.ttf");
+}
 .pokemon {
   height: auto;
   background-color: var(--header-color);
   color: var(--header-base);
   padding: 0vw 1vw 5vw 1vw;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Pixelate", sans-serif;
+  overflow-x: hidden;
+  /* font-family: "Orbitron", sans-serif; */
 }
 </style>

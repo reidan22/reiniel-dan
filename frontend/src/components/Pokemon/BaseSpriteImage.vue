@@ -110,6 +110,12 @@ export default {
   height: 7vw;
   padding: 0px;
   margin: 0px;
+  transition: all 0.5s ease;
+}
+
+.pkmn-img:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.5);
 }
 
 .pkmn-single-row {

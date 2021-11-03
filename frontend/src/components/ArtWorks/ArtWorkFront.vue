@@ -6,8 +6,7 @@
     </b-col>
     <b-col cols="4" class="row-button centrify" v-if="!isLoaded">
       <button id="art-work-front-button" class="centrify" @click="hideFront()">
-        &nbsp;ENTER&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-chevron-right"></i
-        >&nbsp;
+        <i class="fas fa-chevron-right"></i>&nbsp;
       </button>
     </b-col>
     <b-row id="art-work-front" class="centrify" v-if="!isLoaded && randomImage">
@@ -104,20 +103,26 @@ export default {
 }
 
 #art-work-front-button {
-  background-color: var(--header-color);
+  /* background-color: var(--header-color); */
   color: var(--header-base);
+  /* color: var(--header-color); */
   width: 12rem;
-  height: 3.5rem;
+  height: 3rem;
   transition: all 0.5s ease;
   z-index: 20;
+  border-radius: 50px;
+  border: 1px solid var(--header-base);
+  text-shadow: 0px 0px 10px var(--header-color);
 }
 
 #art-work-front-button:hover,
 #art-work-front-button:active {
-  border: 1px solid var(--header-base);
+  transform: scale(0.9);
+  border: 1px solid var(--header-color);
   transition: all 0.5s ease;
   background-color: var(--header-base);
   color: var(--header-color);
+  opacity: 0.7;
 }
 
 .row-logo {
