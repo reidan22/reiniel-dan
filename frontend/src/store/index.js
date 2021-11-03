@@ -23,7 +23,8 @@ export default new Vuex.Store({
     pkmnType2:"",
     pkmnFormatName:"",
     pkmnSprite:"",
-    pkmnPageIsLoaded:false
+    pkmnPageIsLoaded:false,
+    showPkmnDataPage:false,
 
   },
   mutations: {
@@ -85,6 +86,9 @@ export default new Vuex.Store({
     },    
     setPkmnPageIsLoaded(state){
       state.pkmnPageIsLoaded = true;
+    },
+    setShowPkmnDataPage(state,payload){
+      state.showPkmnDataPage = payload;
     }
   },
   actions: {

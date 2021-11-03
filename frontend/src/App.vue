@@ -89,22 +89,22 @@ button {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-/* 
-::-webkit-scrollbar {
+
+*::-webkit-scrollbar {
   width: 10px;
 }
 
-::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.568);
-  border: 1px solid var(--header-color);
+  border: 1px solid rgb(32, 31, 31);
+  background: rgb(32, 31, 31);
 }
 
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: var(--header-base);
-  border: 1px solid var(--header-color);
-  height: 20%;
-} */
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(32, 31, 31);
+}
 
 .dan-logo {
   font-family: "Quicksand", sans-serif;

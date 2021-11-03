@@ -1,12 +1,19 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
+
 import DrumKit from '@/views/DrumKit'
+
 import ArtWorks from '@/views/ArtWorks'
 import BaseArtWork from '@/components/ArtWorks/BaseArtWork'
+
 import DataScience from '@/views/DataScience'
+
 import Pokemon from '@/views/Pokemon'
+import PokemonDataPage from '@/components/Pokemon/PokemonDataPage'
+
 Vue.use(VueRouter);
 
 const routes =     [
@@ -44,11 +51,19 @@ const routes =     [
         name: "DataScience",
         component: DataScience,
       },
-    {
-      path: "/projects/pokemon",
-      name: "Pokemon",
-      component: Pokemon,
-    },
+      {
+        path: "/projects/pokemon",
+        name: "Pokemon",
+        component: Pokemon,
+        children: [
+          {
+            path: ":pkmn",
+            name: "PokemonDataPage",
+            component: PokemonDataPage,
+            props: true,
+          },
+        ],
+      },
     ];
 
 
