@@ -17,47 +17,7 @@
 
 <script>
 // @ is an alias to /src
-let pkmn_types = [
-  "normal",
-  "fire",
-  "water",
-  "electric",
-  "grass",
-  "ice",
-  "fighting",
-  "poison",
-  "ground",
-  "flying",
-  "psychic",
-  "bug",
-  "rock",
-  "ghost",
-  "dragon",
-  "dark",
-  "steel",
-  "fairy",
-];
 
-let type_colors = [
-  "#A8A77A",
-  "#EE8130",
-  "#6390F0",
-  "#F7D02C",
-  "#7AC74C",
-  "#96D9D6",
-  "#C22E28",
-  "#A33EA1",
-  "#E2BF65",
-  "#A98FF3",
-  "#F95587",
-  "#A6B91A",
-  "#B6A136",
-  "#735797",
-  "#6F35FC",
-  "#705746",
-  "#B7B7CE",
-  "#D685AD",
-];
 export default {
   name: "BaseSpriteImage",
   props: ["pokemon"],
@@ -90,18 +50,7 @@ export default {
       return this.pokemon.type2;
     },
   },
-  methods: {
-    getColor(type, org) {
-      let type_index = pkmn_types.indexOf(type);
-      let color = "";
-      if (type_index === -1) {
-        color = type_colors[pkmn_types.indexOf(org)];
-      } else {
-        color = type_colors[type_index];
-      }
-      return color;
-    },
-  },
+  methods: {},
 };
 </script>
 <style scoped>
