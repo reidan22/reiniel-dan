@@ -289,5 +289,23 @@ b {
     height: 7vw;
     font-size: 10px;
   }
+
+  #info {
+    font-size: 5vw;
+    padding-left: 5px;
+  }
+
+  .info-modal {
+    font-size: 2vw;
+  }
+
+  .info-content {
+    width: 95vw;
+  }
+
+  .elem-type {
+    width: 20vw;
+    font-size: 2.5vw;
+  }
 }
 </style>
