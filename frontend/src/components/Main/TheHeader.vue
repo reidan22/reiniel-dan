@@ -7,28 +7,25 @@
         <router-link to="/about"><i class="fas fa-user"></i> About</router-link>
       </b-row>
 
-      <b-row @click="onClickLink()">
-        <router-link to="/projects/data_science"
-          ><i class="fas fa-chart-bar"></i> Data Science</router-link
-        >
-      </b-row>
-      <b-row @click="onClickLink()">
-        <router-link to="/projects/artworks" @click="onClickLink()">
-          <i class="fas fa-paint-brush" /> Artworks</router-link
-        >
-      </b-row>
       <b-row
         @mouseenter="isSubHeaderClicked = true"
         @mouseleave="isSubHeaderClicked = false"
         class="side-proj-all"
       >
-        <div
+        <!-- <div
           :class="{
             'sub-header': true,
             c1: !isSubHeaderClicked,
             c2: isSubHeaderClicked,
           }"
           @click="clickSubHeader()"
+        > -->
+        <div
+          :class="{
+            'sub-header': true,
+            c1: !isSubHeaderClicked,
+            c2: isSubHeaderClicked,
+          }"
         >
           Side Projects &nbsp;&nbsp;<i
             :class="{
@@ -39,16 +36,32 @@
           />
         </div>
         <b-row @click="onClickLink()" :class="{ hide: !isSubHeaderClicked }">
+          <router-link to="/projects/data_science"
+            ><i class="fas fa-chart-bar"></i> Data Science</router-link
+          >
+          <router-link to="/projects/artworks" @click="onClickLink()">
+            <i class="fas fa-paint-brush" /> Artworks</router-link
+          >
+
           <router-link to="/projects/pokemon"
             ><i class="fas fa-dragon"></i> Pokemon</router-link
           >
           <router-link to="/projects/drumkit"
             ><i class="fas fa-drum"></i> Drum Kit</router-link
           >
-
-          <a href="/reiniel-dan/gamefront/index.html"
-            ><i class="fas fa-gamepad"></i> Game Front (x)</a
+          <router-link to="/projects/todo"
+            ><i class="fas fa-tasks"></i> ToDo.</router-link
           >
+
+          <router-link to="/projects/gamefront"
+            ><i class="fas fa-gamepad"></i> Game Front</router-link
+          >
+          <!-- <a href="https://todo-app-dan.herokuapp.com/" target="_blank"
+            ><i class="fas fa-tasks"></i> ToDo. (x)</a
+          > -->
+          <!-- <a href="/reiniel-dan/gamefront/index.html" target="_blank"
+            ><i class="fas fa-gamepad"></i> Game Front (x)</a
+          > -->
         </b-row>
       </b-row>
     </span>
@@ -116,7 +129,7 @@ a {
   padding: 5px;
   transition: all 0.5s ease;
   margin: 0px;
-  /* border-bottom: 0.1px solid var(--header-color); */
+  border-top: 0.1px solid var(--header-color);
 }
 .side-proj-all,
 div.row {

@@ -14,6 +14,9 @@ import DataScience from '@/views/DataScience'
 import Pokemon from '@/views/Pokemon'
 import PokemonDataPage from '@/components/Pokemon/PokemonDataPage'
 
+import ToDo from '@/views/ToDo'
+import GameFront from '@/views/GameFront'
+
 Vue.use(VueRouter);
 
 const routes =     [
@@ -63,6 +66,16 @@ const routes =     [
             props: true,
           },
         ],
+      },
+      {
+        path: "/projects/todo",
+        name: "ToDo",
+        component: ToDo,
+      },
+      {
+        path: "/projects/gamefront",
+        name: "GameFront",
+        component: GameFront,
       },
     ];
 
