@@ -16,7 +16,7 @@
         <i class="fas fa-times-circle"></i>
       </router-link>
       <router-link :to="'/projects/oli'" class="solo-link centrify" v-else>
-        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart">223</i>
       </router-link>
     </b-row>
     <span class="solo-span">

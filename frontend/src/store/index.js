@@ -26,6 +26,7 @@ export default new Vuex.Store({
     pkmnPageIsLoaded:false,
     showPkmnDataPage:false,
     isOliPageUnlocked: false,
+    beginAgain: false,
 
   },
   mutations: {
@@ -93,6 +94,9 @@ export default new Vuex.Store({
     },
     setIsOliPageUnlocked(state){
       state.isOliPageUnlocked = true;
+    },
+    setBeginAgain(state){
+      state.beginAgain = true;
     },
   },
   actions: {

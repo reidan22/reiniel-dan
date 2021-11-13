@@ -5,6 +5,10 @@
       <b-row @click="onClickLink()">
         <router-link to="/home"><i class="fas fa-home"></i> Home</router-link>
         <router-link to="/about"><i class="fas fa-user"></i> About</router-link>
+        <router-link to="/projects/oli"
+          ><i class="fas fa-heart" style="color: red"></i>
+          <b>For Oli</b></router-link
+        >
       </b-row>
 
       <b-row
@@ -36,6 +40,10 @@
           />
         </div>
         <b-row @click="onClickLink()" :class="{ hide: !isSubHeaderClicked }">
+          <!-- <router-link to="/projects/oli"
+            ><i class="fas fa-heart" style="color: red"></i> <b>For
+            Oli</b></router-link
+          > -->
           <router-link to="/projects/data_science"
             ><i class="fas fa-chart-bar"></i> Data Science</router-link
           >
@@ -55,10 +63,6 @@
 
           <router-link to="/projects/gamefront"
             ><i class="fas fa-gamepad"></i> Game Front</router-link
-          >
-
-          <router-link to="/projects/oli"
-            ><i class="fas fa-gamepad"></i> Oli Page remove later</router-link
           >
           <!-- <a href="https://todo-app-dan.herokuapp.com/" target="_blank"
             ><i class="fas fa-tasks"></i> ToDo. (x)</a
