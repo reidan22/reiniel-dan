@@ -25,6 +25,7 @@ export default new Vuex.Store({
     pkmnSprite:"",
     pkmnPageIsLoaded:false,
     showPkmnDataPage:false,
+    isOliPageUnlocked: false,
 
   },
   mutations: {
@@ -89,7 +90,10 @@ export default new Vuex.Store({
     },
     setShowPkmnDataPage(state,payload){
       state.showPkmnDataPage = payload;
-    }
+    },
+    setIsOliPageUnlocked(state){
+      state.isOliPageUnlocked = true;
+    },
   },
   actions: {
   },
