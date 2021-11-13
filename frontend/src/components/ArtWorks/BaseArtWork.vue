@@ -8,8 +8,15 @@
     </span>
     <b-row class="solo-header centrify">
       {{ image.title }}
-      <router-link :to="'/projects/artworks'" class="solo-link centrify">
+      <router-link
+        :to="'/projects/artworks'"
+        class="solo-link centrify"
+        v-if="image.key != '223'"
+      >
         <i class="fas fa-times-circle"></i>
+      </router-link>
+      <router-link :to="'/projects/oli'" class="solo-link centrify" v-else>
+        <i class="fas fa-heart"></i>
       </router-link>
     </b-row>
     <span class="solo-span">
@@ -97,7 +104,7 @@ export default {
 .solo-link:hover {
   transition: all 0.5s ease;
   color: var(--header-base);
-  transform: rotate(270deg) scale(1.32);
+  transform: rotate(360deg) scale(1.32);
   opacity: 0.5;
 }
 

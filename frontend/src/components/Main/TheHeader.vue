@@ -56,6 +56,10 @@
           <router-link to="/projects/gamefront"
             ><i class="fas fa-gamepad"></i> Game Front</router-link
           >
+
+          <router-link to="/projects/oli"
+            ><i class="fas fa-gamepad"></i> Oli Page remove later</router-link
+          >
           <!-- <a href="https://todo-app-dan.herokuapp.com/" target="_blank"
             ><i class="fas fa-tasks"></i> ToDo. (x)</a
           > -->

@@ -41,7 +41,8 @@
           <!-- </b-col> -->
         </b-row>
       </b-col>
-      <b-col class="centrify">{{ fetchedInfo }}</b-col>
+      <!-- <b-col class="centrify">{{ fetchedInfo }}</b-col> -->
+      <b-col class="centrify"></b-col>
     </b-row>
   </b-row>
 </template>

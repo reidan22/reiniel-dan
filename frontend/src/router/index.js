@@ -17,6 +17,8 @@ import PokemonDataPage from '@/components/Pokemon/PokemonDataPage'
 import ToDo from '@/views/ToDo'
 import GameFront from '@/views/GameFront'
 
+import Oli from "@/views/Oli"
+
 Vue.use(VueRouter);
 
 const routes =     [
@@ -76,6 +78,11 @@ const routes =     [
         path: "/projects/gamefront",
         name: "GameFront",
         component: GameFront,
+      },
+      {
+        path: "/projects/oli",
+        name: "Oli",
+        component: Oli,
       },
     ];
 
