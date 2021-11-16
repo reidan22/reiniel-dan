@@ -3,7 +3,9 @@
     {{ fromPropsIsOpen(isOpen) }}
     <span>
       <b-row @click="onClickLink()">
-        <router-link to="/home"><i class="fas fa-home"></i> Home</router-link>
+        <router-link to="/home" class="nav-home"
+          ><i class="fas fa-home"></i> Home</router-link
+        >
         <router-link to="/about"><i class="fas fa-user"></i> About</router-link>
         <router-link to="/projects/oli"
           ><i class="fas fa-heart" style="color: red"></i> &nbsp;<b
@@ -109,20 +111,24 @@ export default {
 #nav {
   position: fixed;
   left: 0px;
-  top: 2vh;
-  /* height: 50vh; */
-  width: 20vh;
+  top: 20px;
+  height: 100vh;
+  width: 25vh;
   padding: 0px;
   background-color: var(--header-base);
-  border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  border: 1px solid var(--header-border);
   border-left: transparent;
   transition: transform 0.5s;
   overflow: hidden;
   font-size: 0.85rem;
   transition: all 0.5s ease;
-  z-index: 500;
+  z-index: 499;
+  opacity: 0.7;
+  backdrop-filter: blur(25px);
+  box-shadow: 3px 3px 10px var(--header-border);
+}
+.nav-home {
+  padding-top: 20px;
 }
 
 a {
@@ -175,7 +181,7 @@ a:active {
 
 .open-header {
   transition: transform 0.5s;
-  transform: translateX(-20vh);
+  transform: translateX(-26vh);
 }
 
 @media only screen and (max-width: 500px) {

@@ -1,7 +1,34 @@
 <template>
   <b-container fluid>
     {{ isLinkClicked() }}
-    <span
+    <i
+      id="icon-span"
+      :class="{
+        fas: true,
+        'fa-chevron-circle-right': !isHeaderTabOpen,
+        'fa-times-circle': isHeaderTabOpen,
+        'icon-open': isHeaderTabOpen,
+        'icon-span-open': isHeaderTabOpen,
+        'icon-close': !isHeaderTabOpen,
+        'icon-span': !isHeaderTabOpen,
+      }"
+      @click="
+        clickHeaderTab();
+        $emit('header-tab', isHeaderTabOpen);
+      "
+    ></i>
+    <svg viewBox="0 0 305 100" class="svg-all">
+      <path
+        fill-opacity="1"
+        d="M 0 0 C 0 100 0 100 50 100 A 50 50 0 1 1 50 200 C 0 200 0 250 0 300 "
+        :class="{ 'svg-hide': isHeaderTabOpen, svg: true }"
+        @click="
+          clickHeaderTab();
+          $emit('header-tab', isHeaderTabOpen);
+        "
+      ></path>
+    </svg>
+    <!-- <span
       id="header-tab"
       @click="
         clickHeaderTab();
@@ -23,7 +50,7 @@
           'icon-close': !isHeaderTabOpen,
         }"
       ></i>
-    </span>
+    </span> -->
   </b-container>
 </template>
 
@@ -51,17 +78,65 @@ export default {
 </script>
 
 <style scoped>
-#header-tab {
+.svg-all {
+  position: fixed;
+  left: 0px;
+  top: -100px;
+  z-index: 499;
+  width: 150px;
+  height: 200px;
+}
+
+.svg {
+  position: fixed;
+  left: 0px;
+  z-index: 499;
+  fill: var(--header-base);
+  transition: all 0.5s ease;
+  stroke: var(--header-color);
+  opacity: 0.7;
+  backdrop-filter: blur(25px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.svg-hide {
+  transition: all 0.5s ease;
+  transform: translateX(-200px);
+}
+/* #header-tab {
   position: fixed;
   top: 2vh;
   left: 20vh;
   height: 5vh;
   font-size: 20px;
   z-index: 500;
-}
+} */
 
 #icon-span {
+  position: fixed;
   transition: all 0.5s ease;
+  z-index: 500;
+  color: var(--header-color);
+}
+
+.icon-span {
+  left: 18px;
+  top: 42px;
+}
+
+.icon-span-open {
+  left: 150px;
+  top: 35px;
 }
 
 #icon-span:hover {
