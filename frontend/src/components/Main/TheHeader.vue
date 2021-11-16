@@ -123,9 +123,9 @@ export default {
   font-size: 0.85rem;
   transition: all 0.5s ease;
   z-index: 499;
-  opacity: 0.7;
+  opacity: 0.9;
   backdrop-filter: blur(25px);
-  box-shadow: 3px 3px 10px var(--header-border);
+  box-shadow: 0px 0px 2px var(--header-border);
 }
 .nav-home {
   padding-top: 20px;
@@ -187,6 +187,7 @@ a:active {
 @media only screen and (max-width: 500px) {
   #nav {
     font-size: 0.8rem;
+    width: 23vh;
   }
 }
 </style>

@@ -17,7 +17,8 @@
         $emit('header-tab', isHeaderTabOpen);
       "
     ></i>
-    <svg viewBox="0 0 305 100" class="svg-all">
+
+    <svg viewBox="-205 0 305 100" class="svg-all">
       <path
         fill-opacity="1"
         d="M 0 0 C 0 100 0 100 50 100 A 50 50 0 1 1 50 200 C 0 200 0 250 0 300 "
@@ -80,7 +81,7 @@ export default {
 <style scoped>
 .svg-all {
   position: fixed;
-  left: 0px;
+  left: -101px;
   top: -100px;
   z-index: 499;
   width: 150px;
@@ -98,29 +99,10 @@ export default {
   backdrop-filter: blur(25px);
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.5s ease;
-}
-
-.fade-enter,
-.fade-leave-active {
-  transform: scale(0.5);
-  opacity: 0;
-}
-
 .svg-hide {
   transition: all 0.5s ease;
   transform: translateX(-200px);
 }
-/* #header-tab {
-  position: fixed;
-  top: 2vh;
-  left: 20vh;
-  height: 5vh;
-  font-size: 20px;
-  z-index: 500;
-} */
 
 #icon-span {
   position: fixed;
@@ -179,7 +161,7 @@ export default {
 
 @media only screen and (max-width: 500px) {
   .close-span {
-    width: 5vh;
+    width: 3vh;
   }
 }
 </style>

@@ -7,8 +7,13 @@
       @click="onClickOfFrontElement()"
       v-if="showFrontElement"
     >
-      <b-row class="main-front-row-2 centrify"> {{ currentHello }} </b-row>
-      <b-row class="main-front-row-1 dan-logo centrify" v-if="showFront">
+      <b-row class="main-front-row-2 centrify text-glow">
+        {{ currentHello }}
+      </b-row>
+      <b-row
+        class="main-front-row-1 dan-logo centrify text-glow"
+        v-if="showFront"
+      >
         <i class="fas fa-terminal" id="front-logo" />dan
       </b-row>
       <!-- <img class="front-bg-image centrify" :src="bgImage" alt="" /> -->
@@ -183,6 +188,12 @@ export default {
   height: 100vh;
   width: 100vw;
   z-index: 499;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--header-color), white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media only screen and (max-width: 500px) {
   .main-front-row-2 {

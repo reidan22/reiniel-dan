@@ -112,4 +112,8 @@ button {
   font-weight: 800;
   color: aqua;
 }
+
+.text-glow {
+  text-shadow: 0 0 80px rgb(192 219 255), 0 0 32px rgb(65 120 255 );
+}
 </style>

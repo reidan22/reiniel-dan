@@ -1,12 +1,14 @@
 <template>
   <b-container fluid class="centrify" id="art-work-all">
     <b-col cols="4" class="row-logo centrify" v-if="!isLoaded">
-      <span class="dan-logo"><i class="fas fa-terminal" />dan</span>
-      &nbsp;<span>| ART</span>
+      <span class="dan-logo text-glow"
+        ><i class="fas fa-terminal text-glow" />dan</span
+      >
+      &nbsp;<span class="text-glow">| ART</span>
     </b-col>
     <b-col cols="4" class="row-button centrify" v-if="!isLoaded">
       <button id="art-work-front-button" class="centrify" @click="hideFront()">
-        <i class="fas fa-chevron-right"></i>&nbsp;
+        <i class="fas fa-chevron-right text-glow"></i>&nbsp;
       </button>
     </b-col>
     <b-row id="art-work-front" class="centrify" v-if="!isLoaded && randomImage">
@@ -118,11 +120,14 @@ export default {
 #art-work-front-button:hover,
 #art-work-front-button:active {
   transform: scale(0.9);
-  border: 1px solid var(--header-color);
+  /* border: 1px solid var(--header-color); */
   transition: all 0.5s ease;
-  background-color: var(--header-base);
-  color: var(--header-color);
+  /* background-color: var(--header-base); */
+  /* background: linear-gradient(to right, cyan,white); */
+
+  /* color: var(--header-color); */
   opacity: 0.7;
+  /* @apply text-glow; */
 }
 
 .row-logo {
