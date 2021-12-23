@@ -22,8 +22,11 @@
           class="shape-fill"
         ></path>
       </svg>
-      <h1>This is the about page</h1>
+      <!-- <h1>This is the about page</h1> -->
     </div>
+    <b-row>
+      <h4>About | Website under development</h4>
+    </b-row>
   </b-row>
 </template>
 

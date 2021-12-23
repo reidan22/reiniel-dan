@@ -24,6 +24,9 @@
         ></path>
       </svg>
     </div>
+    <b-row>
+      <h4>Home | Website under development</h4>
+    </b-row>
   </b-row>
 </template>
 

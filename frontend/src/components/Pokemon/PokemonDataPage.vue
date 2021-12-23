@@ -8,7 +8,6 @@
       border: '10px solid ' + getColor(fetchedInfo.type2, fetchedInfo.type1),
     }"
   >
-
     <b-row class="centrify">
       <b-col>
         <b-row class="centrify">
@@ -42,7 +41,7 @@
         </b-row>
       </b-col>
       <!-- <b-col class="centrify">{{ fetchedInfo }}</b-col> -->
-      <b-col class="centrify"></b-col>
+      <b-col class="centrify"> Display pokemon details here...</b-col>
     </b-row>
   </b-row>
 </template>
@@ -109,6 +108,7 @@ export default {
 .pkmn-data {
   position: relative;
   height: auto;
+  min-height: 65vh;
   width: 95%;
   margin: 0px;
   margin-top: 50px;
@@ -137,8 +137,6 @@ export default {
   text-shadow: 1px 2px 0px white;
   border-radius: 20px;
 }
-
-
 
 @media only screen and (max-width: 500px) {
   .pkmn-data {

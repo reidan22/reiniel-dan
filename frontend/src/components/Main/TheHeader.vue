@@ -7,11 +7,11 @@
           ><i class="fas fa-home"></i> Home</router-link
         >
         <router-link to="/about"><i class="fas fa-user"></i> About</router-link>
-        <router-link to="/projects/oli"
+        <!-- <router-link to="/projects/oli"
           ><i class="fas fa-heart" style="color: red"></i> &nbsp;<b
             >For Oli</b
           ></router-link
-        >
+        > -->
       </b-row>
 
       <b-row
